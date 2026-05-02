@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instituto Salutem – Psicologia Plural</title>
+  <meta name="description" content="Instituto Salutem – Psicologia Plural. Terapia individual, grupos terapêuticos, cursos e supervisão para psicólogos e estudantes de Psicologia. Atendimento online em todo o Brasil.">
+  <meta name="keywords" content="psicologia, terapia online, cursos de psicologia, ética profissional, supervisão, orientação vocacional, luto, terapia sistêmica, estudantes de psicologia">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Instituto Salutem – Psicologia Plural">
+  <meta property="og:description" content="Levamos conhecimento técnico e ético nas diversas formas do atuar da Psicologia.">
+  <meta property="og:image" content="/assets/img/og-image.jpg">
+  <meta property="og:url" content="https://institutosalutem.com.br">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/logo/favicon-escuro.svg">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/logo/favicon.svg" media="(prefers-color-scheme: light)">
+  <link rel="canonical" href="https://institutosalutem.com.br">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+
+  <!-- ── NAVBAR ─────────────────────────────────────────── -->
+  <header class="navbar navbar--light" role="banner">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="/" class="navbar__logo" aria-label="Instituto Salutem – Página inicial">
+          <img src="assets/img/logo/logo-salutem.png"
+               onerror="this.onerror=null;this.src='assets/img/logo/placeholder-logo.svg'"
+               alt="Logo Instituto Salutem" height="44">
+          <img src="assets/img/logo/logo-salutem-dark.png"
+               class="navbar__logo--dark"
+               onerror="this.onerror=null;this.src='assets/img/logo/placeholder-logo-escuro.svg'"
+               alt="Logo Instituto Salutem" height="44">
+         </a>
+
+        <!-- Toggle mobile -->
+        <button class="navbar__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navbar-nav">
+          <span></span><span></span><span></span>
+        </button>
+
+        <!-- Nav links -->
+        <div class="navbar__nav-wrap" id="navbar-nav">
+          <nav class="navbar__nav" aria-label="Navegação principal">
+            <a href="/" class="navbar__link active">Home</a>
+            <a href="pages/sobre.html" class="navbar__link">Sobre</a>
+            <a href="pages/equipe.html" class="navbar__link">Equipe</a>
+            <a href="pages/clinica.html" class="navbar__link">Clínica</a>
+            <a href="pages/cursos.html" class="navbar__link">Cursos</a>
+            <a href="pages/artigos.html" class="navbar__link">Artigos</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ── HERO ───────────────────────────────────────────── -->
+    <section class="hero" aria-label="Apresentação do Instituto Salutem">
+      <!-- Pássaros — animação CSS sprite (bird.css integrado em animations.css) -->
+      <div class="bird-container bird-container-one">
+        <div class="bird bird-one"></div>
+      </div>
+      <div class="bird-container bird-container-two">
+        <div class="bird bird-two"></div>
+      </div>
+      <div class="bird-container bird-container-three">
+        <div class="bird bird-three"></div>
+      </div>
+      <div class="bird-container bird-container-four">
+        <div class="bird bird-four"></div>
+      </div>
+      <div class="bird-container bird-container-five">
+        <div class="bird bird-five"></div>
+      </div>
+      <div class="bird-container bird-container-six">
+        <div class="bird bird-six"></div>
+      </div>
+      <div class="bird-container bird-container-seven">
+        <div class="bird bird-seven"></div>
+      </div>
+      <div class="bird-container bird-container-eight">
+        <div class="bird bird-eight"></div>
+      </div>
+      <div class="bird-container bird-container-nine">
+        <div class="bird bird-nine"></div>
+      </div>
+      <div class="bird-container bird-container-ten">
+        <div class="bird bird-ten"></div>
+      </div>
+
+      <div class="hero__content">
+        <img src="assets/img/logo/logo-salutem.png"
+             onerror="this.onerror=null;this.src='assets/img/logo/favicon.svg'"
+             alt="Instituto Salutem"
+             class="hero__logo">
+
+        <span class="hero__tagline-pre">Atendimento online · Todo o Brasil</span>
+        <h1 class="hero__title">Instituto Salutem</h1>
+        <p class="hero__subtitle">Psicologia Plural</p>
+
+        <p class="hero__tagline">
+          "Levamos conhecimento técnico e ético nas diversas formas do atuar da Psicologia."
+        </p>
+
+        <div class="btn-group btn-group--hero" style="justify-content:center;">
+          <a href="#sobre" class="btn btn-primary">
+            <i class="ph ph-compass" aria-hidden="true"></i>
+            Conheça nosso trabalho
+          </a>
+          <a href="https://wa.me/5524992182941?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20do%20Instituto%20Salutem"
+             class="btn btn-whatsapp"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Fale conosco pelo WhatsApp">
+            <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
+            Fale conosco
+          </a>
+        </div>
+      </div>
+
+      <!-- Indicador de scroll -->
+      <div class="hero__scroll" aria-hidden="true">
+        <i class="ph ph-caret-down"></i>
+      </div>
+    </section>
+
+    <!-- ── SOBRE (resumo) ─────────────────────────────────── -->
+    <section class="section" id="sobre" aria-labelledby="sobre-title">
+      <div class="container">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
+
+          <div data-reveal="fade-right">
+            <span class="eyebrow">Nossa história</span>
+            <h2 class="section-title" id="sobre-title">Quem somos</h2>
+            <div class="divider"></div>
+            <p>O Instituto Salutem – Psicologia Plural nasce da amizade de três psicólogas de diferentes gerações, unidas pela vontade de oferecer orientação e conhecimento de qualidade para estudantes e profissionais da Psicologia.</p>
+            <p>Com diferentes especialidades e olhares, construímos um espaço de formação e cuidado que prioriza a ética, a ciência e a laicidade — pilares que guiam cada projeto, curso e atendimento que realizamos.</p>
+            <a href="pages/sobre.html" class="btn btn-secondary mt-24">
+              Saiba mais sobre nós
+              <i class="ph ph-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <div data-reveal="fade-left" style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+            <div class="pillar-card">
+              <span class="pillar-card__emoji" aria-hidden="true">🔬</span>
+              <h3 class="pillar-card__title">Científica</h3>
+              <p class="pillar-card__desc">Baseada em evidências e referências técnicas reconhecidas</p>
+            </div>
+            <div class="pillar-card">
+              <span class="pillar-card__emoji" aria-hidden="true">⚖️</span>
+              <h3 class="pillar-card__title">Ética</h3>
+              <p class="pillar-card__desc">Pautada no Código de Ética Profissional (Res. 010/2005)</p>
+            </div>
+            <div class="pillar-card" style="grid-column:1/-1;">
+              <span class="pillar-card__emoji" aria-hidden="true">🌐</span>
+              <h3 class="pillar-card__title">Laica</h3>
+              <p class="pillar-card__desc">Atuação fundamentada em princípios laicos e plurais, respeitando todas as visões de mundo</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-sep">
+
+    <!-- ── SERVIÇOS CLÍNICOS ──────────────────────────────── -->
+    <section class="section section--clinica" id="clinica" aria-labelledby="servicos-title">
+
+      <!-- Camada de imagem de fundo com overlay -->
+      <div class="section--clinica__bg" aria-hidden="true"></div>
+
+      <div class="container" style="position:relative; z-index:1;">
+        <div class="section-header centered" data-reveal>
+          <span class="eyebrow" style="color:var(--color-warm);">Clínica virtual</span>
+          <h2 class="section-title" id="servicos-title" style="color:#fff;">Serviços clínicos</h2>
+          <div class="divider centered" style="background:linear-gradient(90deg,var(--color-warm),rgba(255,255,255,0.4));"></div>
+          <p class="section-subtitle" style="color:rgba(255,255,255,0.85); max-width:600px;">
+            Todos os atendimentos são realizados de forma <strong style="color:#fff;">100% online</strong>, com a mesma qualidade e sigilo do atendimento presencial.
+          </p>
+          <div style="margin-top:16px;">
+            <span class="online-badge" style="background:rgba(37,211,102,0.18);border-color:rgba(37,211,102,0.4);color:#fff;">
+              Atendimento online · Todo o Brasil
+            </span>
+          </div>
+        </div>
+
+        <div class="grid grid-5 stagger-children" role="list">
+          <div class="service-card service-card--glass" data-reveal role="listitem">
+            <div class="service-card__icon" aria-hidden="true">
+              <i class="ph ph-student"></i>
+            </div>
+            <h3 class="service-card__title">Terapia para Estudantes de Psicologia</h3>
+            <p class="service-card__desc">Espaço de escuta e apoio para quem está no final da graduação e nas angústias da formação.</p>
+          </div>
+
+          <div class="service-card service-card--glass" data-reveal role="listitem">
+            <div class="service-card__icon" aria-hidden="true">
+              <i class="ph ph-user"></i>
+            </div>
+            <h3 class="service-card__title">Terapia Individual</h3>
+            <p class="service-card__desc">Atendimento psicológico individual para adolescentes e adultos em abordagem sistêmica.</p>
+          </div>
+
+          <div class="service-card service-card--glass" data-reveal role="listitem">
+            <div class="service-card__icon" aria-hidden="true">
+              <i class="ph ph-users-three"></i>
+            </div>
+            <h3 class="service-card__title">Grupos de Adolescentes</h3>
+            <p class="service-card__desc">Grupos terapêuticos voltados para o desenvolvimento e bem-estar de adolescentes.</p>
+          </div>
+
+          <div class="service-card service-card--glass" data-reveal role="listitem">
+            <div class="service-card__icon" aria-hidden="true">
+              <i class="ph ph-heart-break"></i>
+            </div>
+            <h3 class="service-card__title">Grupos de Enlutados</h3>
+            <p class="service-card__desc">Grupos de apoio para adultos em processo de luto, promovendo acolhimento e elaboração.</p>
+          </div>
+
+          <div class="service-card service-card--glass" data-reveal role="listitem">
+            <div class="service-card__icon" aria-hidden="true">
+              <i class="ph ph-compass-tool"></i>
+            </div>
+            <h3 class="service-card__title">Orientação Vocacional e Profissional</h3>
+            <p class="service-card__desc">Para adolescentes e adultos que buscam clareza sobre sua trajetória profissional.</p>
+          </div>
+        </div>
+
+        <div class="text-center mt-48" data-reveal>
+          <a href="pages/clinica.html" class="btn btn-white">
+            Ver todos os serviços
+            <i class="ph ph-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CURSOS EM DESTAQUE ──────────────────────────────── -->
+    <section class="section" id="cursos" aria-labelledby="cursos-title">
+      <div class="container">
+        <div class="section-header centered" data-reveal>
+          <span class="eyebrow">Formação profissional</span>
+          <h2 class="section-title" id="cursos-title">Cursos em destaque</h2>
+          <div class="divider centered"></div>
+          <p class="section-subtitle">Cursos livres com certificado, pensados para estudantes e profissionais de Psicologia.</p>
+        </div>
+
+        <div class="grid grid-3 stagger-children">
+          <article class="course-card" data-reveal>
+            <div class="course-card__header">
+              <span class="course-card__icon" aria-hidden="true">🎓</span>
+              <h3 class="course-card__title">Quase Psis</h3>
+            </div>
+            <div class="course-card__body">
+              <p class="course-card__desc">Orientações essenciais para formandos de Psicologia: carteira do CRP, Carnê Leão, Receita Saúde e primeiros passos na carreira.</p>
+              <a href="mailto:salutempsiplural@gmail.com?subject=Interesse%20no%20curso:%20Quase%20Psis"
+                 class="btn btn-secondary btn-sm w-full">
+                <i class="ph ph-envelope" aria-hidden="true"></i>
+                Tenho interesse
+              </a>
+            </div>
+          </article>
+
+          <article class="course-card" data-reveal>
+            <div class="course-card__header">
+              <span class="course-card__icon" aria-hidden="true">⚖️</span>
+              <h3 class="course-card__title">Preceitos Éticos Online</h3>
+            </div>
+            <div class="course-card__body">
+              <p class="course-card__desc">Fundamentos da ética no atendimento psicológico virtual, com foco nas resoluções do CFP e boas práticas do atendimento remoto.</p>
+              <a href="mailto:salutempsiplural@gmail.com?subject=Interesse%20no%20curso:%20Preceitos%20Éticos%20Online"
+                 class="btn btn-secondary btn-sm w-full">
+                <i class="ph ph-envelope" aria-hidden="true"></i>
+                Tenho interesse
+              </a>
+            </div>
+          </article>
+
+          <article class="course-card" data-reveal>
+            <div class="course-card__header">
+              <span class="course-card__icon" aria-hidden="true">📋</span>
+              <h3 class="course-card__title">Produção de Documentos</h3>
+            </div>
+            <div class="course-card__body">
+              <p class="course-card__desc">Como elaborar laudos, pareceres, relatórios e declarações psicológicas conforme as normas técnicas e éticas vigentes.</p>
+              <a href="mailto:salutempsiplural@gmail.com?subject=Interesse%20no%20curso:%20Produção%20de%20Documentos"
+                 class="btn btn-secondary btn-sm w-full">
+                <i class="ph ph-envelope" aria-hidden="true"></i>
+                Tenho interesse
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="text-center mt-48" data-reveal>
+          <a href="pages/cursos.html" class="btn btn-primary">
+            Ver todos os cursos
+            <i class="ph ph-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EQUIPE (teaser) ────────────────────────────────── -->
+    <section class="section bg-brand-light" id="equipe" aria-labelledby="equipe-title">
+      <div class="container">
+        <div class="section-header centered" data-reveal>
+          <span class="eyebrow">Nossa equipe</span>
+          <h2 class="section-title" id="equipe-title">Conheça as psicólogas</h2>
+          <div class="divider centered"></div>
+          <p class="section-subtitle">Três psicólogas com diferentes especialidades, unidas pelo compromisso com uma prática ética, científica e plural.</p>
+        </div>
+
+        <div class="grid grid-3 stagger-children">
+          <div class="team-card" data-reveal>
+            <img src="assets/img/team/victoria.jpg"
+                 alt="Victoria Antonieta Tapia Gutiérrez"
+                 class="team-card__photo"
+                 onerror="this.onerror=null;this.src='assets/img/team/placeholder-avatar.svg'"
+                 width="120" height="120">
+            <h3 class="team-card__name">Victoria Tapia Gutiérrez</h3>
+            <p class="team-card__crp">CRP 05/20157</p>
+            <p class="team-card__spec">Psicóloga Clínica · Abordagem Sistêmica<br>Especialista em Família e Casal</p>
+          </div>
+
+          <div class="team-card" data-reveal>
+            <img src="assets/img/team/bruna.jpg"
+                 alt="Bruna Menezes A. Peixoto"
+                 class="team-card__photo"
+                 onerror="this.onerror=null;this.src='assets/img/team/placeholder-avatar.svg'"
+                 width="120" height="120">
+            <h3 class="team-card__name">Bruna Menezes Peixoto</h3>
+            <p class="team-card__crp">CRP 05/78653</p>
+            <p class="team-card__spec">Terapia Sistêmica · Adolescentes e Adultos<br>Orientação Vocacional e Profissional</p>
+          </div>
+
+          <div class="team-card" data-reveal>
+            <img src="assets/img/team/vanessa.jpg"
+                 alt="Vanessa Jabour Moreira Rodrigues"
+                 class="team-card__photo"
+                 onerror="this.onerror=null;this.src='assets/img/team/placeholder-avatar.svg'"
+                 width="120" height="120">
+            <h3 class="team-card__name">Vanessa Jabour Rodrigues</h3>
+            <p class="team-card__crp">CRP 05/74127</p>
+            <p class="team-card__spec">Psicologia Existencialista Sartriana<br>Autolesão · Prevenção do Suicídio</p>
+          </div>
+        </div>
+
+        <div class="text-center mt-48" data-reveal>
+          <a href="pages/equipe.html" class="btn btn-primary">
+            Conheça a equipe completa
+            <i class="ph ph-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── INSTAGRAM / ARTIGOS ────────────────────────────── -->
+    <section class="section" id="artigos" aria-labelledby="artigos-title">
+      <div class="container">
+        <div class="section-header centered" data-reveal>
+          <span class="eyebrow">Conteúdo e reflexões</span>
+          <h2 class="section-title" id="artigos-title">Artigos & Instagram</h2>
+          <div class="divider centered"></div>
+          <p class="section-subtitle">Acompanhe nossas publicações sobre psicologia, ética e saúde mental.</p>
+        </div>
+
+        <div class="instagram-embed-container">
+            <!-- Cabeçalho do feed -->
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:0 0 28px;border-bottom:1px solid rgba(27,58,107,0.08);margin-bottom:32px;">
+              <div style="display:flex;align-items:center;gap:14px;">
+                <div style="width:48px;height:48px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);border-radius:50%;display:flex;align-items:center;justify-content:center;" aria-hidden="true">
+                  <i class="ph ph-instagram-logo" style="color:#fff;font-size:22px;"></i>
+                </div>
+                <div>
+                  <p style="font-weight:700;color:var(--color-text);margin:0;font-size:0.95rem;">@institutosalutem.psiplural</p>
+                  <p style="font-size:var(--text-xs);color:var(--color-text-light);margin:0;">Instituto Salutem – Psicologia Plural</p>
+                </div>
+              </div>
+              <a href="https://www.instagram.com/institutosalutem.psiplural" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <i class="ph ph-instagram-logo" aria-hidden="true"></i> Seguir
+              </a>
+            </div>
+
+            <!-- Widget do SnapWidget -->
+            <!-- SnapWidget -->
+            <script src="https://snapwidget.com/js/snapwidget.js"></script>
+            <iframe src="https://snapwidget.com/embed/1122986" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; " title="Posts from Instagram"></iframe>
+            
+          </div>
+          
+        </div>
+
+        <div class="text-center mt-32" data-reveal>
+          <a href="pages/artigos.html" class="btn btn-secondary">
+            Ver todos os artigos
+            <i class="ph ph-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA DE CONTATO ─────────────────────────────────── -->
+    <div class="contact-strip" data-reveal>
+      <div class="container">
+        <div class="contact-strip__inner">
+          <div>
+            <h2 class="contact-strip__title">Pronto para começar?</h2>
+            <p class="contact-strip__sub">Entre em contato e agende sua primeira sessão.</p>
+          </div>
+          <div class="btn-group">
+            <a href="https://wa.me/5524992182941?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20do%20Instituto%20Salutem."
+               class="btn btn-whatsapp"
+               target="_blank" rel="noopener noreferrer">
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
+              WhatsApp
+            </a>
+            <a href="pages/contato.html" class="btn btn-white">
+              Formulário de contato
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="/" class="footer__logo" aria-label="Instituto Salutem – Página inicial">
+            <div style="display:flex;flex-direction:column;line-height:1.1;">
+              <span class="footer__logo-name">Instituto Salutem</span>
+              <span class="footer__logo-sub">Psicologia Plural</span>
+            </div>
+          </a>
+          <p class="footer__desc">Levamos conhecimento técnico e ético nas diversas formas do atuar da Psicologia. Atendimento 100% online, em todo o Brasil.</p>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/institutosalutem.psiplural" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Instagram">
+              <i class="ph ph-instagram-logo" aria-hidden="true"></i>
+            </a>
+            <a href="https://wa.me/5524992182941" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="WhatsApp">
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:salutempsiplural@gmail.com" class="footer__social-link" aria-label="E-mail">
+              <i class="ph ph-envelope" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <p class="footer__col-title">Navegação</p>
+          <nav class="footer__links" aria-label="Links do rodapé">
+            <a href="/" class="footer__link"><i class="ph ph-house" aria-hidden="true"></i> Home</a>
+            <a href="pages/sobre.html" class="footer__link"><i class="ph ph-info" aria-hidden="true"></i> Sobre</a>
+            <a href="pages/equipe.html" class="footer__link"><i class="ph ph-users" aria-hidden="true"></i> Equipe</a>
+            <a href="pages/clinica.html" class="footer__link"><i class="ph ph-heartbeat" aria-hidden="true"></i> Clínica</a>
+            <a href="pages/cursos.html" class="footer__link"><i class="ph ph-graduation-cap" aria-hidden="true"></i> Cursos</a>
+            <a href="pages/artigos.html" class="footer__link"><i class="ph ph-newspaper" aria-hidden="true"></i> Artigos</a>
+            <a href="pages/contato.html" class="footer__link"><i class="ph ph-chat-circle" aria-hidden="true"></i> Contato</a>
+          </nav>
+        </div>
+
+        <div>
+          <p class="footer__col-title">Contato</p>
+          <div class="footer__contact-item">
+            <i class="ph ph-envelope" aria-hidden="true"></i>
+            <a href="mailto:salutempsiplural@gmail.com" class="footer__link" style="color:rgba(255,255,255,0.7)">salutempsiplural@gmail.com</a>
+          </div>
+          <div class="footer__contact-item">
+            <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
+            <a href="https://wa.me/5524992182941" class="footer__link" style="color:rgba(255,255,255,0.7)" target="_blank" rel="noopener">+55 24 99218-2941</a>
+          </div>
+          <div class="footer__contact-item">
+            <i class="ph ph-instagram-logo" aria-hidden="true"></i>
+            <a href="https://www.instagram.com/institutosalutem.psiplural" class="footer__link" style="color:rgba(255,255,255,0.7)" target="_blank" rel="noopener">@institutosalutem.psiplural</a>
+          </div>
+          <div class="footer__contact-item" style="margin-top:8px;">
+            <i class="ph ph-globe" aria-hidden="true"></i>
+            <span>Atendimento online · Todo o Brasil</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© <span class="js-year">2025</span> Instituto Salutem – Psicologia Plural. Todos os direitos reservados.</p>
+        <div class="footer__legal">
+          <a href="politica-de-privacidade.html">Política de Privacidade</a>
+        </div>
+        <p class="footer__crp">CRP/RJ: Victoria 05/20157 · Bruna 05/78653 · Vanessa 05/74127</p>
+
+      </div>
+        <div class="footer__developer">
+          <p>Desenvolvido por <a href="https://bmenezes.dev" target="_blank" rel="noopener noreferrer">bmenezes.dev</a></p>
+        </div>
+    </div>
+
+    
+  </footer>
+
+  <!-- ── COOKIE BANNER (LGPD) ───────────────────────────── -->
+  <div id="cookie-banner" role="alertdialog" aria-label="Aviso de cookies" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(27,58,107,0.97);color:#fff;padding:20px 24px;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+    <p style="margin:0;font-size:0.875rem;max-width:700px;color:rgba(255,255,255,0.9);">
+      Este site utiliza cookies essenciais para funcionamento. Ao continuar navegando, você concorda com nossa
+      <a href="politica-de-privacidade.html" style="color:var(--color-warm);text-decoration:underline;">Política de Privacidade</a>.
+    </p>
+    <button data-accept class="btn btn-white btn-sm" style="flex-shrink:0;">Entendi</button>
+  </div>
+
+  <!-- ── SCRIPTS ────────────────────────────────────────── -->
+  <script src="assets/js/main.js" defer></script>
+
+  <!--
+    CLOUDFLARE WEB ANALYTICS
+    Inserir o token obtido em: Cloudflare Dashboard → Web Analytics → Add site
+    Descomentar quando tiver o token:
+
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "SEU_TOKEN_ANALYTICS_AQUI"}'></script>
+  -->
+
+
+  <!-- ── BOTÃO FLUTUANTE — FALE CONOSCO ── -->
+  <a href="pages/contato.html"
+     class="fab-contact"
+     aria-label="Fale conosco">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="26" height="26" aria-hidden="true">
+      <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+    </svg>
+    <span class="fab-contact__label">Fale conosco</span>
+  </a>
+</body>
+</html>

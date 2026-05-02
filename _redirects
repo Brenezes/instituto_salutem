@@ -1,0 +1,14 @@
+# Cloudflare Pages — Redirects & Rewrites
+# Documentação: https://developers.cloudflare.com/pages/configuration/redirects/
+
+# URLs amigáveis → páginas reais
+/sobre          /pages/sobre.html           200
+/equipe         /pages/equipe.html          200
+/clinica        /pages/clinica.html         200
+/cursos         /pages/cursos.html          200
+/artigos        /pages/artigos.html         200
+/contato        /pages/contato.html         200
+/privacidade    /politica-de-privacidade.html  200
+
+# Fallback: qualquer rota não encontrada → 404 (mostra index)
+/*              /index.html                 404
