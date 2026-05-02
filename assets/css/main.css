@@ -116,7 +116,7 @@ ul, ol { list-style: none; }
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-title);
   line-height: 1.2;
-  color: var(--color-text);  /* azul-escuro #082c4d */
+  color: var(--color-text);
   font-weight: 700;
 }
 
@@ -198,7 +198,6 @@ input, textarea, select {
   margin: 0 auto;
 }
 
-/* Grid padrão */
 .grid {
   display: grid;
   gap: 28px;
@@ -256,7 +255,6 @@ input, textarea, select {
   white-space: nowrap; border-width: 0;
 }
 
-/* Divisor decorativo */
 .divider {
   width: 60px;
   height: 3px;
@@ -267,14 +265,12 @@ input, textarea, select {
 
 .divider.centered { margin: 20px auto 32px; }
 
-/* Separador de seção */
 .section-sep {
   border: none;
   border-top: 1px solid rgba(27, 58, 107, 0.08);
   margin: 0;
 }
 
-/* Badge / tag */
 .badge {
   display: inline-flex;
   align-items: center;

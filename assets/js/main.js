@@ -16,7 +16,6 @@
 
     if (!navbar) return;
 
-    // Scroll: adicionar classe .scrolled após 60px
     const onScroll = () => {
       if (window.scrollY > 60) {
         navbar.classList.add('scrolled');
@@ -26,19 +25,16 @@
     };
 
     window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll(); // checar posição inicial
+    onScroll();
 
-    // Toggle menu mobile
     if (toggle && navWrap) {
       toggle.addEventListener('click', () => {
         const isOpen = navWrap.classList.toggle('open');
         toggle.classList.toggle('open', isOpen);
         toggle.setAttribute('aria-expanded', String(isOpen));
-        // Impedir scroll do body quando menu aberto
         document.body.style.overflow = isOpen ? 'hidden' : '';
       });
 
-      // Fechar ao clicar em link
       navLinks.forEach(link => {
         link.addEventListener('click', () => {
           navWrap.classList.remove('open');
@@ -48,7 +44,6 @@
         });
       });
 
-      // Fechar ao pressionar Escape
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && navWrap.classList.contains('open')) {
           navWrap.classList.remove('open');
@@ -60,11 +55,9 @@
       });
     }
 
-    // Marcar link ativo com base na URL atual
     const currentPath = window.location.pathname;
     navLinks.forEach(link => {
       const href = link.getAttribute('href') || '';
-      // Normalizar: remover trailing slash e considerar index
       const linkPath = href.replace(/\/$/, '') || '/';
       const pagePath = currentPath.replace(/\/$/, '') || '/';
 
@@ -77,7 +70,6 @@
       }
     });
 
-    // Home: marcar se na raiz
     if (currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/index.html')) {
       const homeLink = document.querySelector('.navbar__link[href="/"], .navbar__link[href="index.html"], .navbar__link[href="/index.html"]');
       if (homeLink) {
@@ -89,9 +81,7 @@
 
   // ── 2. SCROLL REVEAL (Intersection Observer) ──────────────
   (function initScrollReveal() {
-    // Verificar suporte e reduced motion
     if (!('IntersectionObserver' in window)) {
-      // Fallback: mostrar todos os elementos
       document.querySelectorAll('[data-reveal]').forEach(el => {
         el.classList.add('revealed');
       });
@@ -144,7 +134,6 @@
 
   // ── 4. FEEDBACK DO FORMULÁRIO (Cloudflare API / Resend) ───────────────────
   (function initFormFeedback() {
-    // Agora busca pelo ID do formulário que você definiu no HTML
     const form = document.getElementById('formContato');
     if (!form) return;
 
@@ -155,7 +144,6 @@
       const successEl = form.parentElement.querySelector('.form-success');
       const errorEl   = form.parentElement.querySelector('.form-error');
 
-      // Estado de loading
       if (btn) {
         btn.disabled = true;
         btn.innerHTML = '<i class="ph ph-spinner-gap" aria-hidden="true" style="animation: spin 1s linear infinite;"></i> Enviando...';
@@ -206,12 +194,10 @@
       });
     });
 
-    // Fotos da equipe: fallback para avatar placeholder
     document.querySelectorAll('.team-card__photo').forEach(img => {
       img.addEventListener('error', function () {
         const name = this.getAttribute('alt') || 'PS';
         const initials = name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase();
-        // Substituir por SVG inline com iniciais
         const svg = `data:image/svg+xml;utf8,${encodeURIComponent(generateAvatarSVG(initials))}`;
         this.src = svg;
       });

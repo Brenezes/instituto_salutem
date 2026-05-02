@@ -70,32 +70,23 @@
       this.amplitude = rand(15, 40);
       this.frequency = rand(0.004, 0.009);
       this.phase     = rand(0, Math.PI * 2);
-
-      // Batida de asas
       this.wingPhase = rand(0, Math.PI * 2);
       this.wingSpeed = rand(0.06, 0.12);
-
-      // Usado para calcular posição Y senoidal
       this.xOffset = this.x;
     }
 
     update() {
-      // Mover horizontalmente
       this.x += this.speed;
 
-      // Trajetória senoidal: y varia em função de x
       this.y = this.baseY + this.amplitude * Math.sin(this.frequency * (this.x - this.xOffset) + this.phase);
 
-      // Animar asas
       this.wingPhase += this.wingSpeed;
 
-      // Reposicionar quando sair pela direita
       if (this.x > W + 60) {
         this.x = -rand(50, 150);
         this.baseY = rand(H * 0.05, H * 0.75);
         this.y = this.baseY;
         this.xOffset = this.x;
-        // Aleatorizar nova velocidade e parâmetros
         this.speed     = rand(0.4, isMobile ? 0.9 : 1.2);
         this.amplitude = rand(15, 40);
         this.frequency = rand(0.004, 0.009);
@@ -116,19 +107,11 @@
       const s = this.size;
       const x = this.x;
       const y = this.y;
-
-      // Fator de batida de asas: 0 = asas abertas, 1 = asas fechadas
-      // Math.sin vai de -1 a 1; normalizamos para 0–1
       const wingFactor = (Math.sin(this.wingPhase) + 1) / 2;
-
-      // A elevação da asa varia:
-      // - Asa totalmente aberta: ponta da asa em y - size * 0.5
-      // - Asa fechada (para baixo): ponta em y + size * 0.05
       const wingLift = s * 0.5 - wingFactor * s * 0.55;
 
       ctx.beginPath();
 
-      // Asa esquerda: curva quadrática do centro para a ponta esquerda
       ctx.moveTo(x, y);
       ctx.quadraticCurveTo(
         x - s * 0.5, y - wingLift * 0.6,
@@ -155,7 +138,6 @@
     const birdCount = isMobile ? randInt(4, 6) : randInt(8, 12);
 
     for (let i = 0; i < birdCount; i++) {
-      // Inicializar espalhados pelo canvas (não todos do lado esquerdo)
       birds.push(new Bird(false));
     }
   }
@@ -210,11 +192,9 @@
   });
 
   // ── Iniciar ───────────────────────────────────────────────
-  // Aguardar o hero ter dimensões definidas
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => { init(); animate(); });
   } else {
-    // Pequeno delay para garantir que o hero já foi renderizado
     requestAnimationFrame(() => { init(); animate(); });
   }
 

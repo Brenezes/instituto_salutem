@@ -11,7 +11,6 @@
   right: 0;
   z-index: 1000;
   padding: 20px 0;
-  /* Transparente no topo — hero tem fundo claro, links ficam visíveis */
   background: transparent;
   transition: background var(--transition-normal), padding var(--transition-normal), box-shadow var(--transition-normal);
 }
@@ -31,7 +30,6 @@
   gap: 32px;
 }
 
-/* Logo na navbar */
 .navbar__logo {
   display: flex;
   align-items: center;
@@ -46,16 +44,12 @@
   width: auto;
 }
 
-/* Topo padrão (hero azul): mostra logo branca, esconde azul */
 .navbar__logo img:first-child { display: block; }
 .navbar__logo--dark           { display: none !important; }
 
-/* Após scroll (todas as páginas): mostra logo azul, esconde branca */
 .navbar.scrolled .navbar__logo img:first-child { display: none; }
 .navbar.scrolled .navbar__logo--dark           { display: block !important; }
 
-/* navbar--light (index, politica): logo azul a todo tempo, nunca mostra a branca */
-/* !important aqui garante que sobrescreve a regra genérica acima */
 .navbar.navbar--light .navbar__logo img:first-child { display: none !important; }
 .navbar.navbar--light .navbar__logo--dark           { display: block !important; }
 
@@ -63,14 +57,12 @@
   color: rgba(255, 255, 255, 0.90);
 }
 
-/* Hover/active no topo das páginas internas */
 .navbar:not(.navbar--light):not(.scrolled) .navbar__link:hover,
 .navbar:not(.navbar--light):not(.scrolled) .navbar__link.active {
   background: rgba(255, 255, 255, 0.18);
   color: #fff;
 }
 
-/* Links azuis após scroll (todas as páginas) */
 .navbar.scrolled .navbar__link {
   color: var(--color-text);
 }
@@ -80,12 +72,10 @@
   color: var(--color-brand);
 }
 
-/* Hamburguer branco no topo das páginas internas */
 .navbar:not(.navbar--light):not(.scrolled) .navbar__toggle span {
   background: rgba(255, 255, 255, 0.90);
 }
 
-/* Hamburguer azul após scroll (todas as páginas) */
 .navbar.scrolled .navbar__toggle span {
   background: var(--color-brand);
 }
@@ -101,7 +91,7 @@
 .navbar--light .navbar__toggle span {
   background: var(--color-brand);
 }
-/* Logo no index: esconde a light no topo, mostra a azul */
+
 .navbar--light .navbar__logo img:first-child { display: block; }
 .navbar--light .navbar__logo--dark           { display: none !important; }
 
@@ -128,7 +118,6 @@
   text-transform: uppercase;
 }
 
-/* Links de navegação */
 .navbar__nav {
   display: flex;
   align-items: center;
@@ -153,7 +142,6 @@
   color: var(--color-brand);
 }
 
-/* Botão CTA na navbar */
 .navbar__cta {
   font-family: var(--font-body);
   font-size: 0.875rem;
@@ -176,7 +164,6 @@
   transform: translateY(-1px);
 }
 
-/* Hamburger mobile */
 .navbar__toggle {
   display: none;
   flex-direction: column;
@@ -209,7 +196,6 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Mobile nav */
 @media (max-width: 900px) {
   .navbar__toggle { display: flex; }
 
@@ -339,7 +325,6 @@
   font-size: var(--text-md);
 }
 
-/* Grupo de botões */
 .btn-group {
   display: flex;
   align-items: center;
@@ -355,7 +340,7 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(160deg, var(--color-brand-light) 0%, var(--color-bg) 60%, var(--color-accent) 100%);
-  overflow: hidden; /* birds nunca causam scroll horizontal */
+  overflow: hidden;
   padding: 100px 0 80px;
 }
 
@@ -423,7 +408,6 @@
   opacity: 0.85;
 }
 
-/* Scroll indicator */
 .hero__scroll {
   position: absolute;
   bottom: 36px;
@@ -515,7 +499,6 @@
   margin-bottom: 0;
 }
 
-/* Card de curso */
 .course-card {
   background: var(--color-white);
   border-radius: var(--radius-card);
@@ -576,7 +559,6 @@
   margin-bottom: 20px;
 }
 
-/* Card de artigo/instagram */
 .article-card {
   background: var(--color-white);
   border-radius: var(--radius-card);
@@ -656,7 +638,6 @@
   color: var(--color-brand-mid);
 }
 
-/* Card de equipe */
 .team-card {
   background: var(--color-white);
   border-radius: var(--radius-card);
@@ -707,7 +688,6 @@
   line-height: 1.5;
 }
 
-/* Card de pilar */
 .pillar-card {
   background: var(--color-white);
   border-radius: var(--radius-card);
@@ -951,7 +931,6 @@
   .form-row { grid-template-columns: 1fr; }
 }
 
-/* Status do formulário */
 .form-success {
   background: #d4edda;
   color: #155724;
@@ -1037,18 +1016,18 @@
   font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.35);
   margin: 0;
-  font-family: var(--font-body); /* ← mesma fonte do footer */
+  font-family: var(--font-body);
 }
 
 .footer__developer a {
-  color: rgba(255, 255, 255, 0.50); /* ← sem azul, mesmo tom do texto */
+  color: rgba(255, 255, 255, 0.50);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s ease;
 }
 
 .footer__developer a:hover {
-  color: var(--color-warm); /* ← destaque sutil só no hover */
+  color: var(--color-warm);
 }
 
 .footer__logo {
@@ -1300,7 +1279,6 @@
 }
 
 /* ── BOTÃO FLUTUANTE — FALE CONOSCO (FAB, canto inferior direito) ─ */
-/* Substitui o botão "Fale conosco" do header — mais elegante e fixo */
 .fab-contact {
   position: fixed;
   bottom: 28px;
@@ -1320,7 +1298,6 @@
   white-space: nowrap;
   box-shadow: 0 4px 20px rgba(27, 58, 107, 0.35);
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.2s ease;
-  /* Entrada suave ao carregar */
   animation: fabEntrance 0.5s ease 0.8s both;
 }
 
@@ -1345,7 +1322,6 @@
   transform: scale(1.15);
 }
 
-/* Label do botão */
 .fab-contact__label {
   letter-spacing: 0.01em;
 }
@@ -1355,7 +1331,6 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Mobile: colapsa para só ícone, sem texto */
 @media (max-width: 600px) {
   .fab-contact {
     bottom: 20px;
@@ -1373,18 +1348,16 @@
   overflow: hidden;
 }
 
-/* Camada de imagem + overlay azul-marinho */
 .section--clinica__bg {
   position: absolute;
   inset: 0;
   background-image: url('../img/clinica-bg.jpg');
   background-size: cover;
-  background-position: center 30%; /* foca na parte superior (mãos/terapeuta) */
-  background-attachment: fixed;    /* efeito parallax suave */
+  background-position: center 30%;
+  background-attachment: fixed;
   z-index: 0;
 }
 
-/* Overlay: gradiente azul-marinho semitransparente para legibilidade do texto */
 .section--clinica__bg::after {
   content: '';
   position: absolute;
@@ -1397,13 +1370,12 @@
   );
 }
 
-/* Cards com efeito glass sobre o fundo escuro */
 .service-card--glass {
   background: rgba(255, 255, 255, 0.10);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  border-top: 3px solid rgba(201, 185, 154, 0.6); /* bege-areia no topo */
+  border-top: 3px solid rgba(201, 185, 154, 0.6);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.20);
 }
 
@@ -1413,7 +1385,6 @@
   transform: translateY(-6px);
 }
 
-/* Ícone e texto adaptados para fundo escuro */
 .service-card--glass .service-card__icon {
   background: rgba(255, 255, 255, 0.15);
   color: var(--color-warm);
@@ -1432,7 +1403,6 @@
   color: rgba(255, 255, 255, 0.78);
 }
 
-/* Mobile: desativar parallax (causa problemas em iOS) */
 @media (max-width: 768px) {
   .section--clinica__bg {
     background-attachment: scroll;
