@@ -19,7 +19,7 @@ export async function onRequestPost(context) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        from: 'Site Instituto Salutem <contato@institutosalutem.com.br>',
+        from: 'Site Instituto Salutem <contato@institutosalutem.com.br/pages/contato>',
         to: 'salutempsiplural@gmail.com',
         subject: `Novo contato pelo site: ${assunto}`,
         html: `
