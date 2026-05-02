@@ -10,5 +10,3 @@
 /contato        /pages/contato.html         200
 /privacidade    /politica-de-privacidade.html  200
 
-# Fallback: qualquer rota não encontrada → 404 (mostra index)
-/*              /index.html                 404
