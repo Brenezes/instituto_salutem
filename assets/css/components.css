@@ -221,7 +221,10 @@
 
   .navbar__nav-wrap {
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: rgba(250, 248, 245, 0.98);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -233,7 +236,7 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity var(--transition-normal);
-    z-index: 1000;
+    z-index: 999;
   }
 
   .navbar__nav-wrap.open {
