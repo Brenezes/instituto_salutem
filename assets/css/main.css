@@ -203,6 +203,13 @@ input, textarea, select {
   gap: 28px;
 }
 
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
 .grid-4 { grid-template-columns: repeat(4, 1fr); }
@@ -318,6 +325,13 @@ input, textarea, select {
   :root {
     --container-px: 16px;
     --section-padding: 48px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .sobre-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 }
 

@@ -196,6 +196,18 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
+.navbar__toggle.open span {
+  background: var(--color-brand) !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 900px) {
+  .navbar__toggle {
+    position: relative;
+    z-index: 1002;
+  }
+}
+
 @media (max-width: 900px) {
   .navbar__toggle { display: flex; }
 
