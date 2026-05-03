@@ -9,7 +9,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 10001;
   padding: 20px 0;
   background: transparent;
   transition: background var(--transition-normal), padding var(--transition-normal), box-shadow var(--transition-normal);
@@ -236,7 +236,7 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity var(--transition-normal);
-    z-index: 999;
+    z-index: 10000;
   }
 
   .navbar__nav-wrap.open {
@@ -370,10 +370,7 @@
 
 .hero__canvas {
   position: absolute;
-  top: 0; 
-  right: 0; 
-  bottom: 0; 
-  left: 0;
+  inset: 0;
   z-index: 0;
   pointer-events: none;
 }
@@ -1377,10 +1374,7 @@
 
 .section--clinica__bg {
   position: absolute;
-  top: 0; 
-  right: 0; 
-  bottom: 0; 
-  left: 0;
+  inset: 0;
   background-image: url('../img/clinica-bg.jpg');
   background-size: cover;
   background-position: center 30%;
@@ -1391,10 +1385,7 @@
 .section--clinica__bg::after {
   content: '';
   position: absolute;
-  top: 0; 
-  right: 0; 
-  bottom: 0; 
-  left: 0;
+  inset: 0;
   background: linear-gradient(
     160deg,
     rgba(8, 44, 77, 0.88) 0%,
