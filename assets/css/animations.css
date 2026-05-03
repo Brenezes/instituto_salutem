@@ -1,9 +1,11 @@
-/* ====
+/* ============================================================
    animations.css — Instituto Salutem · Psicologia Plural
    Pássaros Canvas, Scroll-Reveal, Transições, Efeitos
-   ==== */
+   ============================================================ */
 
-/* ── Scroll Reveal ──── */
+/* ── Scroll Reveal ─────────────────────────────────────────── */
+/* Adicionar data-reveal ao elemento HTML para ativar a animação */
+/* data-reveal="fade-up" (padrão), "fade-left", "fade-right", "scale", "fade" */
 
 [data-reveal] {
   opacity: 0;
@@ -36,6 +38,7 @@
   transform: none;
 }
 
+/* Delay escalonado para grupos */
 [data-reveal-delay="100"] { transition-delay: 0.1s; }
 [data-reveal-delay="200"] { transition-delay: 0.2s; }
 [data-reveal-delay="300"] { transition-delay: 0.3s; }
@@ -43,13 +46,15 @@
 [data-reveal-delay="500"] { transition-delay: 0.5s; }
 [data-reveal-delay="600"] { transition-delay: 0.6s; }
 
-/* ── Pássaros — Animação CSS Sprite ──── */
+/* ── Pássaros — Animação CSS Sprite ───────────────────────── */
+/* Técnica: sprite sheet SVG + keyframes de voo da esquerda para direita */
+/* Filtro CSS transforma o sprite para o azul-marinho da marca (#1B3A6B) */
 
 .bird {
   background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg');
-  filter: invert(34%) sepia(55%) saturate(427%) hue-rotate(141deg) brightness(93%) contrast(91%);
+  /* Filtro calculado para converter o sprite para #1B3A6B */
+  filter: invert(20%) sepia(60%) saturate(500%) hue-rotate(195deg) brightness(80%) contrast(95%);
   background-size: auto 100%;
-  background-repeat: no-repeat;
   width: 88px;
   height: 125px;
   will-change: background-position;
@@ -71,7 +76,7 @@
 
 .bird-container {
   position: absolute;
-  top: 10vh;
+  top: 10%;
   left: -3%;
   transform: scale(0.3) translateX(-10vw);
   will-change: transform;
@@ -83,55 +88,76 @@
   opacity: 0.55;
 }
 
-.bird-container-one   { animation-duration: 18s;  animation-delay:  0s;    top: 12vh; }
-.bird-container-two   { animation-duration: 22s;  animation-delay: -6s;    top: 24vh; }
-.bird-container-three { animation-duration: 16s;  animation-delay: -10s;   top:  8vh; }
-.bird-container-four  { animation-duration: 20s;  animation-delay: -14s;   top: 32vh; }
-.bird-container-five  { animation-duration: 19s;  animation-delay: -3s;    top: 18vh; opacity: 0.45; }
-.bird-container-six   { animation-duration: 24s;  animation-delay: -8s;    top: 40vh; opacity: 0.40; }
-.bird-container-seven { animation-duration: 15s;  animation-delay: -12s;   top:  5vh; opacity: 0.50; }
-.bird-container-eight { animation-duration: 21s;  animation-delay: -17s;   top: 28vh; opacity: 0.45; }
-.bird-container-nine  { animation-duration: 17s;  animation-delay: -5s;    top: 45vh; opacity: 0.35; }
-.bird-container-ten   { animation-duration: 23s;  animation-delay: -19s;   top: 15vh; opacity: 0.40; }
+/* 10 containers — delays negativos garantem que já estejam em voo ao carregar */
+.bird-container-one   { animation-duration: 18s;  animation-delay:  0s;    top: 12%; }
+.bird-container-two   { animation-duration: 22s;  animation-delay: -6s;    top: 24%; }
+.bird-container-three { animation-duration: 16s;  animation-delay: -10s;   top:  8%; }
+.bird-container-four  { animation-duration: 20s;  animation-delay: -14s;   top: 32%; }
+.bird-container-five  { animation-duration: 19s;  animation-delay: -3s;    top: 18%; opacity: 0.45; }
+.bird-container-six   { animation-duration: 24s;  animation-delay: -8s;    top: 40%; opacity: 0.40; }
+.bird-container-seven { animation-duration: 15s;  animation-delay: -12s;   top:  5%; opacity: 0.50; }
+.bird-container-eight { animation-duration: 21s;  animation-delay: -17s;   top: 28%; opacity: 0.45; }
+.bird-container-nine  { animation-duration: 17s;  animation-delay: -5s;    top: 45%; opacity: 0.35; }
+.bird-container-ten   { animation-duration: 23s;  animation-delay: -19s;   top: 15%; opacity: 0.40; }
 
 @keyframes fly-cycle {
   100% { background-position: -900px 0; }
 }
 
+/* Voo suave: começa invisível à esquerda, cresce, passa pela tela, some à direita */
 @keyframes fly-right-one {
-  0%   { transform: scale(0.3) translateX(-10vw); }
-  10%  { transform: translateY(2vh)  translateX(10vw)  scale(0.4); }
-  20%  { transform: translateY(0vh)  translateX(30vw)  scale(0.5); }
-  30%  { transform: translateY(4vh)  translateX(50vw)  scale(0.6); }
-  40%  { transform: translateY(2vh)  translateX(70vw)  scale(0.6); }
-  50%  { transform: translateY(0vh)  translateX(90vw)  scale(0.6); }
-  60%  { transform: translateY(0vh)  translateX(110vw) scale(0.6); }
-  100% { transform: translateY(0vh)  translateX(110vw) scale(0.6); }
+  0%   { transform: translateX(-15vw) translateY(0)   scale(0.25); opacity: 0;    }
+  5%   { opacity: 0.55; }
+  15%  { transform: translateX(5vw)   translateY(2vh)  scale(0.38); }
+  30%  { transform: translateX(28vw)  translateY(-1vh) scale(0.50); }
+  45%  { transform: translateX(50vw)  translateY(3vh)  scale(0.58); }
+  60%  { transform: translateX(72vw)  translateY(1vh)  scale(0.58); }
+  80%  { transform: translateX(92vw)  translateY(-1vh) scale(0.55); opacity: 0.55; }
+  93%  { opacity: 0; }
+  100% { transform: translateX(115vw) translateY(0)    scale(0.55); opacity: 0;    }
 }
 
 @keyframes fly-right-two {
-  0%   { transform: translateY(-2vh) translateX(-10vw) scale(0.5); }
-  10%  { transform: translateY(0vh)  translateX(10vw)  scale(0.4); }
-  20%  { transform: translateY(-4vh) translateX(30vw)  scale(0.6); }
-  30%  { transform: translateY(1vh)  translateX(50vw)  scale(0.45); }
-  40%  { transform: translateY(-2.5vh) translateX(70vw) scale(0.5); }
-  50%  { transform: translateY(0vh)  translateX(90vw)  scale(0.45); }
-  51%  { transform: translateY(0vh)  translateX(110vw) scale(0.45); }
-  100% { transform: translateY(0vh)  translateX(110vw) scale(0.45); }
+  0%   { transform: translateX(-15vw) translateY(-1vh) scale(0.35); opacity: 0;    }
+  5%   { opacity: 0.50; }
+  15%  { transform: translateX(5vw)   translateY(1vh)  scale(0.42); }
+  30%  { transform: translateX(28vw)  translateY(-3vh) scale(0.52); }
+  45%  { transform: translateX(50vw)  translateY(2vh)  scale(0.48); }
+  60%  { transform: translateX(72vw)  translateY(-1vh) scale(0.52); }
+  80%  { transform: translateX(92vw)  translateY(1vh)  scale(0.48); opacity: 0.50; }
+  93%  { opacity: 0; }
+  100% { transform: translateX(115vw) translateY(0)    scale(0.48); opacity: 0;    }
 }
 
+/* Pássaros 3 e 4 usam trajetória alternada */
 .bird-container-three,
 .bird-container-four  { animation-name: fly-right-two; }
-.bird-container-five  { animation-name: fly-right-one; }
-.bird-container-six   { animation-name: fly-right-two; }
-.bird-container-seven { animation-name: fly-right-one; }
-.bird-container-eight { animation-name: fly-right-two; }
-.bird-container-nine  { animation-name: fly-right-one; }
-.bird-container-ten   { animation-name: fly-right-two; }
 
+/* Terceira trajetória — voa mais baixo e levemente ondulado */
+@keyframes fly-right-three {
+  0%   { transform: translateX(-15vw) translateY(2vh)   scale(0.20); opacity: 0;    }
+  5%   { opacity: 0.45; }
+  15%  { transform: translateX(5vw)   translateY(-1vh)  scale(0.30); }
+  30%  { transform: translateX(28vw)  translateY(2vh)   scale(0.40); }
+  45%  { transform: translateX(50vw)  translateY(-2vh)  scale(0.45); }
+  60%  { transform: translateX(72vw)  translateY(3vh)   scale(0.45); }
+  80%  { transform: translateX(92vw)  translateY(0vh)   scale(0.42); opacity: 0.45; }
+  93%  { opacity: 0; }
+  100% { transform: translateX(115vw) translateY(0)     scale(0.42); opacity: 0;    }
+}
+
+.bird-container-five  { animation-name: fly-right-one;   }
+.bird-container-six   { animation-name: fly-right-three; }
+.bird-container-seven { animation-name: fly-right-two;   }
+.bird-container-eight { animation-name: fly-right-one;   }
+.bird-container-nine  { animation-name: fly-right-three; }
+.bird-container-ten   { animation-name: fly-right-two;   }
+
+/* Mobile: pássaros menores, sutis, e só os primeiros 5 visíveis */
 @media (max-width: 768px) {
   .bird-container { opacity: 0.38; }
   .bird { width: 60px; height: 85px; }
+  /* Esconder os últimos 5 no mobile para não sobrecarregar */
   .bird-container-six,
   .bird-container-seven,
   .bird-container-eight,
@@ -139,11 +165,12 @@
   .bird-container-ten { display: none; }
 }
 
+/* Reduzir motion */
 @media (prefers-reduced-motion: reduce) {
   .bird-container, .bird { animation: none !important; display: none !important; }
 }
 
-/* ── Animações de entrada da Hero ──── */
+/* ── Animações de entrada da Hero ──────────────────────────── */
 @keyframes heroFadeIn {
   from {
     opacity: 0;
@@ -197,7 +224,7 @@
   animation-delay: 0.9s;
 }
 
-/* ── Loader / Spinner ──── */
+/* ── Loader / Spinner ──────────────────────────────────────── */
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
@@ -212,7 +239,7 @@
   margin: 0 auto;
 }
 
-/* ── Pulse ──── */
+/* ── Pulse ─────────────────────────────────────────────────── */
 @keyframes pulse {
   0%, 100% { box-shadow: 0 0 0 0 rgba(27, 58, 107, 0.4); }
   50% { box-shadow: 0 0 0 12px rgba(27, 58, 107, 0); }
@@ -222,7 +249,7 @@
   animation: pulse 2s ease-in-out infinite;
 }
 
-/* ── Float animation ──── */
+/* ── Float animation ───────────────────────────────────────── */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-12px); }
@@ -230,13 +257,13 @@
 
 .float { animation: float 4s ease-in-out infinite; }
 
-/* ── Shimmer de loading ──── */
+/* ── Shimmer de loading ────────────────────────────────────── */
 @keyframes shimmer {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
 }
 
-/* ── Page transition ──── */
+/* ── Page transition ───────────────────────────────────────── */
 @keyframes pageIn {
   from {
     opacity: 0;
@@ -252,7 +279,7 @@
   animation: pageIn 0.5s ease both;
 }
 
-/* ── Hover underline animado ──── */
+/* ── Hover underline animado ───────────────────────────────── */
 .animated-underline {
   position: relative;
   display: inline-block;
@@ -271,14 +298,14 @@
 
 .animated-underline:hover::after { width: 100%; }
 
-/* ── Gradiente animado no fundo hero ──── */
+/* ── Gradiente animado no fundo hero ──────────────────────── */
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* ── Partículas de decoração ──── */
+/* ── Partículas de decoração ───────────────────────────────── */
 .deco-circle {
   position: absolute;
   border-radius: 50%;
@@ -300,7 +327,8 @@
   animation: float 6s ease-in-out infinite reverse;
 }
 
-/* ── Reveal stagger para grids ──── */
+/* ── Reveal stagger para grids ─────────────────────────────── */
+/* Aplica delay automático aos filhos diretos de um grid */
 .stagger-children > *:nth-child(1) { transition-delay: 0.05s; }
 .stagger-children > *:nth-child(2) { transition-delay: 0.15s; }
 .stagger-children > *:nth-child(3) { transition-delay: 0.25s; }
@@ -310,7 +338,7 @@
 .stagger-children > *:nth-child(7) { transition-delay: 0.65s; }
 .stagger-children > *:nth-child(8) { transition-delay: 0.75s; }
 
-/* ── Transição de hover para ícones Phosphor ──── */
+/* ── Transição de hover para ícones Phosphor ───────────────── */
 .icon-btn {
   display: inline-flex;
   align-items: center;
@@ -326,7 +354,7 @@
   transform: scale(1.1);
 }
 
-/* ── Efeito glassmorphism leve (usado em sobreposições) ──── */
+/* ── Efeito glassmorphism leve (usado em sobreposições) ────── */
 .glass {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(12px);
@@ -334,7 +362,7 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* ── Animação de aparição do navbar ──── */
+/* ── Animação de aparição do navbar ───────────────────────── */
 @keyframes navbarIn {
   from { transform: translateY(-100%); opacity: 0; }
   to   { transform: translateY(0);    opacity: 1; }
