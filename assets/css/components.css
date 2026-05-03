@@ -1,9 +1,9 @@
-/* ============================================================
+/* ====
    components.css — Instituto Salutem · Psicologia Plural
    Navbar, Cards, Botões, Footer, Formulário, Seções
-   ============================================================ */
+   ==== */
 
-/* ── NAVBAR ────────────────────────────────────────────────── */
+/* ── NAVBAR ──── */
 .navbar {
   position: fixed;
   top: 0;
@@ -218,7 +218,6 @@
     height: 44px;
     margin-top: 2px;
   }
-}
 
   .navbar__nav-wrap {
     position: fixed;
@@ -259,9 +258,10 @@
     font-size: 1rem;
     padding: 14px 40px;
   }
+}
 
 
-/* ── BOTÕES ────────────────────────────────────────────────── */
+/* ── BOTÕES ──── */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -353,7 +353,7 @@
   flex-wrap: wrap;
 }
 
-/* ── HERO ──────────────────────────────────────────────────── */
+/* ── HERO ──── */
 .hero {
   position: relative;
   min-height: 100svh;
@@ -454,7 +454,7 @@
   50% { transform: translateX(-50%) translateY(6px); }
 }
 
-/* ── CARDS ─────────────────────────────────────────────────── */
+/* ── CARDS ──── */
 .card {
   background: var(--color-white);
   border-radius: var(--radius-card);
@@ -751,7 +751,7 @@
   margin-bottom: 0;
 }
 
-/* ── PÁGINA INTERNA HERO ───────────────────────────────────── */
+/* ── PÁGINA INTERNA HERO ──── */
 .page-hero {
   background: linear-gradient(135deg, var(--color-brand) 0%, #2a4d8a 100%);
   padding: 140px 0 80px;
@@ -805,7 +805,7 @@
   line-height: 1.6;
 }
 
-/* ── SEÇÃO CONTATO RÁPIDO ──────────────────────────────────── */
+/* ── SEÇÃO CONTATO RÁPIDO ──── */
 .contact-strip {
   background: var(--color-brand);
   padding: 56px 0;
@@ -839,7 +839,7 @@
   }
 }
 
-/* ── INFO CARDS DE CONTATO ─────────────────────────────────── */
+/* ── INFO CARDS DE CONTATO ──── */
 .contact-info-card {
   background: var(--color-white);
   border-radius: var(--radius-card);
@@ -881,7 +881,7 @@
   margin-bottom: 0;
 }
 
-/* ── FORMULÁRIO ────────────────────────────────────────────── */
+/* ── FORMULÁRIO ──── */
 .form {
   display: flex;
   flex-direction: column;
@@ -972,7 +972,7 @@
   display: none;
 }
 
-/* ── TABELA ────────────────────────────────────────────────── */
+/* ── TABELA ──── */
 .table-wrapper {
   overflow-x: auto;
   border-radius: var(--radius-card);
@@ -1010,7 +1010,7 @@
 .table tr:last-child td { border-bottom: none; }
 .table tr:hover td { background: var(--color-brand-light); }
 
-/* ── FOOTER ────────────────────────────────────────────────── */
+/* ── FOOTER ──── */
 .footer {
   background: var(--color-brand);
   color: rgba(255,255,255,0.8);
@@ -1203,7 +1203,7 @@
   .footer__crp { text-align: left; }
 }
 
-/* ── SEÇÃO INSTAGRAM ───────────────────────────────────────── */
+/* ── SEÇÃO INSTAGRAM ──── */
 .instagram-embed-container {
   background: var(--color-white);
   border-radius: var(--radius-card);
@@ -1240,7 +1240,7 @@
   margin-bottom: 0;
 }
 
-/* ── LOADING SKELETON ──────────────────────────────────────── */
+/* ── LOADING SKELETON ──── */
 .skeleton {
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;
@@ -1253,7 +1253,7 @@
   100% { background-position: 200% 0; }
 }
 
-/* ── BREADCRUMB ────────────────────────────────────────────── */
+/* ── BREADCRUMB ──── */
 .breadcrumb {
   display: flex;
   align-items: center;
@@ -1272,7 +1272,7 @@
 .breadcrumb a:hover { color: var(--color-brand); }
 .breadcrumb span { opacity: 0.5; }
 
-/* ── ONLINE BADGE ──────────────────────────────────────────── */
+/* ── ONLINE BADGE ──── */
 .online-badge {
   display: inline-flex;
   align-items: center;
@@ -1362,7 +1362,7 @@
   .fab-contact__label { display: none; }
 }
 
-/* ── SEÇÃO CLÍNICA — FUNDO COM IMAGEM ──────────────────────── */
+/* ── SEÇÃO CLÍNICA — FUNDO COM IMAGEM ──── */
 .section--clinica {
   position: relative;
   padding: var(--section-padding);

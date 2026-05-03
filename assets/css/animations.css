@@ -1,9 +1,9 @@
-/* ============================================================
+/* ====
    animations.css — Instituto Salutem · Psicologia Plural
    Pássaros Canvas, Scroll-Reveal, Transições, Efeitos
-   ============================================================ */
+   ==== */
 
-/* ── Scroll Reveal ─────────────────────────────────────────── */
+/* ── Scroll Reveal ──── */
 
 [data-reveal] {
   opacity: 0;
@@ -43,7 +43,7 @@
 [data-reveal-delay="500"] { transition-delay: 0.5s; }
 [data-reveal-delay="600"] { transition-delay: 0.6s; }
 
-/* ── Pássaros — Animação CSS Sprite ───────────────────────── */
+/* ── Pássaros — Animação CSS Sprite ──── */
 
 .bird {
   background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg');
@@ -82,7 +82,6 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   opacity: 0.55;
-  overflow: hidden;
 }
 
 .bird-container-one   { animation-duration: 18s;  animation-delay:  0s;    top: 12vh; }
@@ -160,7 +159,7 @@
   .bird-container, .bird { animation: none !important; display: none !important; }
 }
 
-/* ── Animações de entrada da Hero ──────────────────────────── */
+/* ── Animações de entrada da Hero ──── */
 @keyframes heroFadeIn {
   from {
     opacity: 0;
@@ -214,7 +213,7 @@
   animation-delay: 0.9s;
 }
 
-/* ── Loader / Spinner ──────────────────────────────────────── */
+/* ── Loader / Spinner ──── */
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
@@ -229,7 +228,7 @@
   margin: 0 auto;
 }
 
-/* ── Pulse ─────────────────────────────────────────────────── */
+/* ── Pulse ──── */
 @keyframes pulse {
   0%, 100% { box-shadow: 0 0 0 0 rgba(27, 58, 107, 0.4); }
   50% { box-shadow: 0 0 0 12px rgba(27, 58, 107, 0); }
@@ -239,7 +238,7 @@
   animation: pulse 2s ease-in-out infinite;
 }
 
-/* ── Float animation ───────────────────────────────────────── */
+/* ── Float animation ──── */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-12px); }
@@ -247,13 +246,13 @@
 
 .float { animation: float 4s ease-in-out infinite; }
 
-/* ── Shimmer de loading ────────────────────────────────────── */
+/* ── Shimmer de loading ──── */
 @keyframes shimmer {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
 }
 
-/* ── Page transition ───────────────────────────────────────── */
+/* ── Page transition ──── */
 @keyframes pageIn {
   from {
     opacity: 0;
@@ -269,7 +268,7 @@
   animation: pageIn 0.5s ease both;
 }
 
-/* ── Hover underline animado ───────────────────────────────── */
+/* ── Hover underline animado ──── */
 .animated-underline {
   position: relative;
   display: inline-block;
@@ -288,14 +287,14 @@
 
 .animated-underline:hover::after { width: 100%; }
 
-/* ── Gradiente animado no fundo hero ──────────────────────── */
+/* ── Gradiente animado no fundo hero ──── */
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* ── Partículas de decoração ───────────────────────────────── */
+/* ── Partículas de decoração ──── */
 .deco-circle {
   position: absolute;
   border-radius: 50%;
@@ -317,7 +316,7 @@
   animation: float 6s ease-in-out infinite reverse;
 }
 
-/* ── Reveal stagger para grids ─────────────────────────────── */
+/* ── Reveal stagger para grids ──── */
 .stagger-children > *:nth-child(1) { transition-delay: 0.05s; }
 .stagger-children > *:nth-child(2) { transition-delay: 0.15s; }
 .stagger-children > *:nth-child(3) { transition-delay: 0.25s; }
@@ -327,7 +326,7 @@
 .stagger-children > *:nth-child(7) { transition-delay: 0.65s; }
 .stagger-children > *:nth-child(8) { transition-delay: 0.75s; }
 
-/* ── Transição de hover para ícones Phosphor ───────────────── */
+/* ── Transição de hover para ícones Phosphor ──── */
 .icon-btn {
   display: inline-flex;
   align-items: center;
@@ -343,7 +342,7 @@
   transform: scale(1.1);
 }
 
-/* ── Efeito glassmorphism leve (usado em sobreposições) ────── */
+/* ── Efeito glassmorphism leve (usado em sobreposições) ──── */
 .glass {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(12px);
@@ -351,7 +350,7 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* ── Animação de aparição do navbar ───────────────────────── */
+/* ── Animação de aparição do navbar ──── */
 @keyframes navbarIn {
   from { transform: translateY(-100%); opacity: 0; }
   to   { transform: translateY(0);    opacity: 1; }
