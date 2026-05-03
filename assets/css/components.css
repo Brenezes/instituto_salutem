@@ -203,18 +203,9 @@
 
 @media (max-width: 900px) {
   .navbar__toggle {
-    position: relative;
-    z-index: 1002;
-  }
-}
-
-@media (max-width: 900px) {
-  .navbar__toggle {
     display: flex;
-    position: fixed;
-    top: 20px;
-    right: var(--container-px);
-    z-index: 1010;        
+    position: relative;
+    z-index: 1010;
   }
 
   .navbar__nav-wrap {
@@ -231,7 +222,7 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity var(--transition-normal);
-    z-index: 999;
+    z-index: 1000;
   }
 
   .navbar__nav-wrap.open {
@@ -353,12 +344,12 @@
 /* ── HERO ──────────────────────────────────────────────────── */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(160deg, var(--color-brand-light) 0%, var(--color-bg) 60%, var(--color-accent) 100%);
-  overflow: clip;
+  overflow: visible;
   padding: 100px 0 80px;
 }
 

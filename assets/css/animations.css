@@ -69,8 +69,8 @@
 .bird-ten   { animation-duration: 1s;    animation-delay: -0.55s; }
 
 .bird-container {
-  position: absolute;
-  top: 10%;
+  position: fixed;
+  top: 10vh;
   left: -3%;
   transform: scale(0.3) translateX(-10vw);
   will-change: transform;
@@ -82,16 +82,16 @@
   opacity: 0.55;
 }
 
-.bird-container-one   { animation-duration: 18s;  animation-delay:  0s;    top: 12%; }
-.bird-container-two   { animation-duration: 22s;  animation-delay: -6s;    top: 24%; }
-.bird-container-three { animation-duration: 16s;  animation-delay: -10s;   top:  8%; }
-.bird-container-four  { animation-duration: 20s;  animation-delay: -14s;   top: 32%; }
-.bird-container-five  { animation-duration: 19s;  animation-delay: -3s;    top: 18%; opacity: 0.45; }
-.bird-container-six   { animation-duration: 24s;  animation-delay: -8s;    top: 40%; opacity: 0.40; }
-.bird-container-seven { animation-duration: 15s;  animation-delay: -12s;   top:  5%; opacity: 0.50; }
-.bird-container-eight { animation-duration: 21s;  animation-delay: -17s;   top: 28%; opacity: 0.45; }
-.bird-container-nine  { animation-duration: 17s;  animation-delay: -5s;    top: 45%; opacity: 0.35; }
-.bird-container-ten   { animation-duration: 23s;  animation-delay: -19s;   top: 15%; opacity: 0.40; }
+.bird-container-one   { animation-duration: 18s;  animation-delay:  0s;    top: 12vh; }
+.bird-container-two   { animation-duration: 22s;  animation-delay: -6s;    top: 24vh; }
+.bird-container-three { animation-duration: 16s;  animation-delay: -10s;   top:  8vh; }
+.bird-container-four  { animation-duration: 20s;  animation-delay: -14s;   top: 32vh; }
+.bird-container-five  { animation-duration: 19s;  animation-delay: -3s;    top: 18vh; opacity: 0.45; }
+.bird-container-six   { animation-duration: 24s;  animation-delay: -8s;    top: 40vh; opacity: 0.40; }
+.bird-container-seven { animation-duration: 15s;  animation-delay: -12s;   top:  5vh; opacity: 0.50; }
+.bird-container-eight { animation-duration: 21s;  animation-delay: -17s;   top: 28vh; opacity: 0.45; }
+.bird-container-nine  { animation-duration: 17s;  animation-delay: -5s;    top: 45vh; opacity: 0.35; }
+.bird-container-ten   { animation-duration: 23s;  animation-delay: -19s;   top: 15vh; opacity: 0.40; }
 
 @keyframes fly-cycle {
   100% { background-position: -900% 0; }
