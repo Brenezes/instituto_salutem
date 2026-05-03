@@ -209,7 +209,13 @@
 }
 
 @media (max-width: 900px) {
-  .navbar__toggle { display: flex; }
+  .navbar__toggle {
+    display: flex;
+    position: fixed;
+    top: 20px;
+    right: var(--container-px);
+    z-index: 1010;        
+  }
 
   .navbar__nav-wrap {
     position: fixed;
@@ -352,7 +358,7 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(160deg, var(--color-brand-light) 0%, var(--color-bg) 60%, var(--color-accent) 100%);
-  overflow: hidden;
+  overflow: clip;
   padding: 100px 0 80px;
 }
 
