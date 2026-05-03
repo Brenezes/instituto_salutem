@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica – Instituto Salutem · Psicologia Plural</title>
+  <meta name="description" content="Conheça os serviços clínicos do Instituto Salutem: terapia individual, grupos terapêuticos, orientação vocacional e mais. Atendimento 100% online.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo/favicon-escuro.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo/favicon.svg" media="(prefers-color-scheme: light)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" role="banner">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo" aria-label="Instituto Salutem – Página inicial">
+          <img src="assets/img/logo/logo-salutem.png"
+               onerror="this.onerror=null;this.src='assets/img/logo/placeholder-logo.svg'"
+               alt="Logo Instituto Salutem" height="44">
+          <img src="assets/img/logo/logo-salutem-dark.png"
+               class="navbar__logo--dark"
+               onerror="this.onerror=null;this.src='assets/img/logo/placeholder-logo-escuro.svg'"
+               alt="Logo Instituto Salutem" height="44">
+        </a>
+        <button class="navbar__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navbar-nav">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="navbar__nav-wrap" id="navbar-nav">
+          <nav class="navbar__nav" aria-label="Navegação principal">
+            <a href="index.html" class="navbar__link">Home</a>
+            <a href="sobre.html" class="navbar__link">Sobre</a>
+            <a href="equipe.html" class="navbar__link">Equipe</a>
+            <a href="clinica.html" class="navbar__link active">Clínica</a>
+            <a href="cursos.html" class="navbar__link">Cursos</a>
+            <a href="artigos.html" class="navbar__link">Artigos</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-content">
+
+    <section class="page-hero" aria-label="Serviços clínicos">
+      <div class="container" style="position:relative;z-index:1;">
+        <span class="page-hero__eyebrow">Atendimento virtual</span>
+        <h1 class="page-hero__title">Clínica Salutem</h1>
+        <p class="page-hero__desc">Todos os atendimentos são realizados 100% online, com a mesma qualidade e sigilo do atendimento presencial.</p>
+        <div style="margin-top:20px;">
+          <span class="online-badge" style="background:rgba(37,211,102,0.15);border-color:rgba(37,211,102,0.3);">Atendimento online · Todo o Brasil</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="section" aria-labelledby="servicos-title">
+      <div class="container">
+        <div class="section-header centered" data-reveal>
+          <span class="eyebrow">O que oferecemos</span>
+          <h2 class="section-title" id="servicos-title">Serviços clínicos</h2>
+          <div class="divider centered"></div>
+          <p class="section-subtitle">Cuidado psicológico especializado, acessível de qualquer lugar do Brasil.</p>
+        </div>
+
+        <div class="grid grid-3 stagger-children" style="margin-bottom:48px;">
+
+          <div class="service-card" data-reveal>
+            <div class="service-card__icon"><i class="ph ph-student" aria-hidden="true"></i></div>
+            <h3 class="service-card__title">Terapia para Estudantes de Psicologia</h3>
+            <p class="service-card__desc">Espaço de escuta, apoio e orientação para estudantes de graduação em Psicologia, especialmente nas angústias do final de curso.</p>
+            <p style="font-size:var(--text-xs);color:var(--color-brand-mid);font-weight:600;margin-top:12px;margin-bottom:0;">
+              <i class="ph ph-info" aria-hidden="true"></i> Informações pelo e-mail
+            </p>
+          </div>
+
+          <div class="service-card" data-reveal>
+            <div class="service-card__icon"><i class="ph ph-user" aria-hidden="true"></i></div>
+            <h3 class="service-card__title">Terapia Individual</h3>
+            <p class="service-card__desc">Atendimento psicológico individual para adolescentes e adultos, com abordagem sistêmica e existencialista, conforme a demanda.</p>
+          </div>
+
+          <div class="service-card" data-reveal>
+            <div class="service-card__icon"><i class="ph ph-users-three" aria-hidden="true"></i></div>
+            <h3 class="service-card__title">Grupos de Adolescentes</h3>
+            <p class="service-card__desc">Grupos terapêuticos online voltados para o desenvolvimento emocional, autoconhecimento e bem-estar de adolescentes.</p>
+            <p style="font-size:var(--text-xs);color:var(--color-brand-mid);font-weight:600;margin-top:12px;margin-bottom:0;">
+              <i class="ph ph-users" aria-hidden="true"></i> Formato grupal
+            </p>
+          </div>
+
+          <div class="service-card" data-reveal>
+            <div class="service-card__icon"><i class="ph ph-heart-break" aria-hidden="true"></i></div>
+            <h3 class="service-card__title">Grupos de Enlutados</h3>
+            <p class="service-card__desc">Grupos de apoio terapêutico para adultos em processo de luto, promovendo acolhimento, elaboração e ressignificação.</p>
+            <p style="font-size:var(--text-xs);color:var(--color-brand-mid);font-weight:600;margin-top:12px;margin-bottom:0;">
+              <i class="ph ph-users" aria-hidden="true"></i> Formato grupal
+            </p>
+          </div>
+
+          <div class="service-card" data-reveal>
+            <div class="service-card__icon"><i class="ph ph-compass-tool" aria-hidden="true"></i></div>
+            <h3 class="service-card__title">Orientação Vocacional e Profissional</h3>
+            <p class="service-card__desc">Para adolescentes e adultos que buscam clareza sobre suas escolhas profissionais. Disponível em atendimento individual e em grupo.</p>
+            <p style="font-size:var(--text-xs);color:var(--color-brand-mid);font-weight:600;margin-top:12px;margin-bottom:0;">
+              <i class="ph ph-users" aria-hidden="true"></i> Individual e em grupo
+            </p>
+          </div>
+
+          <!-- Card de destaque -->
+          <div class="service-card" data-reveal style="background:var(--color-brand-light);border:2px solid var(--color-brand);">
+            <div class="service-card__icon" style="background:var(--color-brand);color:#fff;"><i class="ph ph-shield-check" aria-hidden="true"></i></div>
+            <h3 class="service-card__title">Sigilo e Ética</h3>
+            <p class="service-card__desc">Todos os atendimentos seguem rigorosamente o Código de Ética Profissional do Psicólogo (CFP Res. 010/2005) e as normas de atendimento online.</p>
+          </div>
+
+        </div>
+
+        <!-- Tabela resumo -->
+        <div data-reveal>
+          <h3 class="section-title" style="font-size:1.4rem;margin-bottom:24px;text-align:center;">Resumo dos serviços</h3>
+          <div class="table-wrapper">
+            <table class="table" aria-label="Tabela de serviços clínicos">
+              <thead>
+                <tr>
+                  <th>Serviço</th>
+                  <th>Público-alvo</th>
+                  <th>Formato</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Terapia para Estudantes de Psicologia</strong></td>
+                  <td>Estudantes de graduação em Psicologia</td>
+                  <td>Individual · Informações pelo e-mail</td>
+                </tr>
+                <tr>
+                  <td><strong>Terapia Individual</strong></td>
+                  <td>Adolescentes e adultos</td>
+                  <td>Individual</td>
+                </tr>
+                <tr>
+                  <td><strong>Grupos de Adolescentes</strong></td>
+                  <td>Adolescentes</td>
+                  <td>Grupal</td>
+                </tr>
+                <tr>
+                  <td><strong>Grupos de Enlutados</strong></td>
+                  <td>Adultos em processo de luto</td>
+                  <td>Grupal</td>
+                </tr>
+                <tr>
+                  <td><strong>Orientação Vocacional e Profissional</strong></td>
+                  <td>Adolescentes e adultos</td>
+                  <td>Individual e grupal</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INFO ONLINE -->
+    <section class="section bg-alt" aria-labelledby="online-title">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+          <div data-reveal="fade-right">
+            <span class="eyebrow">Como funciona</span>
+            <h2 class="section-title" id="online-title">Atendimento 100% online</h2>
+            <div class="divider"></div>
+            <p>Nossos atendimentos são realizados por videochamada, com total privacidade e segurança. Você escolhe o horário e realiza a sessão de onde estiver.</p>
+            <ul style="margin-top:16px;display:flex;flex-direction:column;gap:12px;">
+              <li style="display:flex;gap:12px;align-items:flex-start;">
+                <i class="ph ph-check-circle" style="color:var(--color-brand-mid);font-size:1.2rem;flex-shrink:0;margin-top:2px;" aria-hidden="true"></i>
+                <span>Plataformas seguras: Google Meet, Zoom ou similar</span>
+              </li>
+              <li style="display:flex;gap:12px;align-items:flex-start;">
+                <i class="ph ph-check-circle" style="color:var(--color-brand-mid);font-size:1.2rem;flex-shrink:0;margin-top:2px;" aria-hidden="true"></i>
+                <span>Sigilo absoluto, conforme o CFP Res. 010/2005</span>
+              </li>
+              <li style="display:flex;gap:12px;align-items:flex-start;">
+                <i class="ph ph-check-circle" style="color:var(--color-brand-mid);font-size:1.2rem;flex-shrink:0;margin-top:2px;" aria-hidden="true"></i>
+                <span>Atendimento para todo o Brasil</span>
+              </li>
+              <li style="display:flex;gap:12px;align-items:flex-start;">
+                <i class="ph ph-check-circle" style="color:var(--color-brand-mid);font-size:1.2rem;flex-shrink:0;margin-top:2px;" aria-hidden="true"></i>
+                <span>Flexibilidade de horários</span>
+              </li>
+            </ul>
+          </div>
+          <div data-reveal="fade-left" style="display:flex;flex-direction:column;gap:16px;">
+            <div class="contact-info-card">
+              <div class="contact-info-card__icon"><i class="ph ph-envelope" aria-hidden="true"></i></div>
+              <div>
+                <p class="contact-info-card__label">E-mail</p>
+                <p class="contact-info-card__value"><a href="mailto:salutempsiplural@gmail.com">salutempsiplural@gmail.com</a></p>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-card__icon"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i></div>
+              <div>
+                <p class="contact-info-card__label">WhatsApp</p>
+                <p class="contact-info-card__value"><a href="https://wa.me/5524992182941" target="_blank" rel="noopener">+55 24 99218-2941</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="contact-strip" data-reveal>
+      <div class="container">
+        <div class="contact-strip__inner">
+          <div>
+            <h2 class="contact-strip__title">Agende sua primeira sessão</h2>
+            <p class="contact-strip__sub">Entre em contato pelo WhatsApp ou e-mail.</p>
+          </div>
+          <div class="btn-group">
+            <a href="https://wa.me/5524992182941?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20Instituto%20Salutem" target="_blank" rel="noopener" class="btn btn-whatsapp">
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i> WhatsApp
+            </a>
+            <a href="contato.html" class="btn btn-white">Formulário de contato</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">
+            <div style="display:flex;flex-direction:column;line-height:1.1;"><span class="footer__logo-name">Instituto Salutem</span><span class="footer__logo-sub">Psicologia Plural</span></div>
+          </a>
+          <p class="footer__desc">Atendimento psicológico 100% online para todo o Brasil.</p>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/institutosalutem.psiplural" target="_blank" rel="noopener" class="footer__social-link" aria-label="Instagram"><i class="ph ph-instagram-logo" aria-hidden="true"></i></a>
+            <a href="https://wa.me/5524992182941" target="_blank" rel="noopener" class="footer__social-link" aria-label="WhatsApp"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i></a>
+            <a href="mailto:salutempsiplural@gmail.com" class="footer__social-link" aria-label="E-mail"><i class="ph ph-envelope" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__col-title">Navegação</p>
+          <nav class="footer__links">
+            <a href="index.html" class="footer__link">Home</a>
+            <a href="sobre.html" class="footer__link">Sobre</a>
+            <a href="equipe.html" class="footer__link">Equipe</a>
+            <a href="clinica.html" class="footer__link">Clínica</a>
+            <a href="cursos.html" class="footer__link">Cursos</a>
+            <a href="artigos.html" class="footer__link">Artigos</a>
+            <a href="contato.html" class="footer__link">Contato</a>
+          </nav>
+        </div>
+        <div>
+          <p class="footer__col-title">Contato</p>
+          <div class="footer__contact-item"><i class="ph ph-envelope" aria-hidden="true"></i><a href="mailto:salutempsiplural@gmail.com" class="footer__link" style="color:rgba(255,255,255,0.7)">salutempsiplural@gmail.com</a></div>
+          <div class="footer__contact-item"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i><a href="https://wa.me/5524992182941" class="footer__link" style="color:rgba(255,255,255,0.7)" target="_blank" rel="noopener">+55 24 99218-2941</a></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© <span class="js-year">2025</span> Instituto Salutem – Psicologia Plural.</p>
+        <div class="footer__legal"><a href="politica-de-privacidade.html">Política de Privacidade</a></div>
+        <p class="footer__crp">CRP/RJ: Victoria 05/20157 · Bruna 05/78653 · Vanessa 05/74127</p>
+      </div>
+      <div class="footer__developer">
+        <p>Desenvolvido por <a href="https://bmenezes.dev" target="_blank" rel="noopener noreferrer">bmenezes.dev</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+
+
+  <!-- ── BOTÃO FLUTUANTE — FALE CONOSCO ── -->
+  <a href="contato.html"
+     class="fab-contact"
+     aria-label="Fale conosco">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="26" height="26" aria-hidden="true">
+      <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+    </svg>
+    <span class="fab-contact__label">Fale conosco</span>
+  </a>
+</body>
+</html>

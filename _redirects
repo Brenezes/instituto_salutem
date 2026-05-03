@@ -1,0 +1,12 @@
+# Cloudflare Pages — Redirects & Rewrites
+# Documentação: https://developers.cloudflare.com/pages/configuration/redirects/
+
+# URLs amigáveis → páginas reais
+/sobre          /sobre.html           200
+/equipe         /equipe.html          200
+/clinica        /clinica.html         200
+/cursos         /cursos.html          200
+/artigos        /artigos.html         200
+/contato        /contato.html         200
+/privacidade    /politica-de-privacidade.html  200
+
