@@ -48,13 +48,15 @@
 .bird {
   background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg');
   filter: invert(20%) sepia(60%) saturate(500%) hue-rotate(195deg) brightness(80%) contrast(95%);
-  background-size: 1000% auto;
+  background-size: 1000% 100%;
+  background-repeat: no-repeat;
   width: 88px;
   height: 125px;
   will-change: background-position;
   animation-name: fly-cycle;
   animation-timing-function: steps(10);
   animation-iteration-count: infinite;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .bird-one   { animation-duration: 1s;    animation-delay: -0.5s;  }
@@ -69,7 +71,7 @@
 .bird-ten   { animation-duration: 1s;    animation-delay: -0.55s; }
 
 .bird-container {
-  position: fixed;
+  position: absolute;
   top: 10vh;
   left: -3%;
   transform: scale(0.3) translateX(-10vw);
@@ -80,6 +82,7 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   opacity: 0.55;
+  overflow: hidden;
 }
 
 .bird-container-one   { animation-duration: 18s;  animation-delay:  0s;    top: 12vh; }

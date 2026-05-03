@@ -202,11 +202,23 @@
 }
 
 @media (max-width: 900px) {
+  .navbar {
+    padding: 14px 0;
+  }
+
+  .navbar__inner {
+    height: 44px;
+    align-items: center;
+  }
+
   .navbar__toggle {
     display: flex;
-    position: relative;
-    z-index: 1010;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    margin-top: 2px;
   }
+}
 
   .navbar__nav-wrap {
     position: fixed;
@@ -247,7 +259,7 @@
     font-size: 1rem;
     padding: 14px 40px;
   }
-}
+
 
 /* ── BOTÕES ────────────────────────────────────────────────── */
 .btn {
@@ -349,7 +361,7 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(160deg, var(--color-brand-light) 0%, var(--color-bg) 60%, var(--color-accent) 100%);
-  overflow: visible;
+  overflow: hidden;
   padding: 100px 0 80px;
 }
 
