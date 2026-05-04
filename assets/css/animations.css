@@ -55,7 +55,7 @@
 */
 
 .bird {
-  background-image: url('/assets/img/bird-sprite.png');
+  background-image: url('/assets/img/bird.png');
   background-size: auto 100%;
   background-repeat: no-repeat;
   width: 88px;

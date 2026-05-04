@@ -208,17 +208,13 @@
   }
 
   .navbar__inner {
-    height: 44px;
-    align-items: center;
+    position: relative;
+    z-index: 10002;
   }
 
   .navbar__toggle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 44px;
-    margin-top: 0;
-    padding: 0;
+    position: relative;
+    z-index: 10002;
   }
 
   .navbar__nav-wrap {
@@ -238,7 +234,7 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    z-index: 9999;
+    z-index: 10000;
   }
 
   .navbar__nav-wrap.open {
@@ -247,10 +243,10 @@
   }
 
   .navbar__nav {
+    display: flex;
     flex-direction: column;
-    gap: 8px;
-    width: 100%;
     align-items: center;
+    gap: 8px;
   }
 
   .navbar__link {
