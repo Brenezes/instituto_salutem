@@ -44,10 +44,19 @@
 [data-reveal-delay="600"] { transition-delay: 0.6s; }
 
 /* ── Pássaros — Animação CSS Sprite ──── */
+/*
+  INSTRUÇÃO: Baixe o arquivo SVG do pássaro em:
+  https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg
+  Salve como: /assets/img/bird-sprite.svg
+
+  OU use o PNG abaixo (mais compatível com todos os browsers):
+  Baixe em: https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells.png
+  Salve como: /assets/img/bird-sprite.png
+*/
 
 .bird {
-  background-image: url('/assets/bird.svg');
-  background-size: 1000% 100%;
+  background-image: url('/assets/img/bird-sprite.png');
+  background-size: auto 100%;
   background-repeat: no-repeat;
   width: 88px;
   height: 125px;
@@ -56,6 +65,7 @@
   animation-timing-function: steps(10);
   animation-iteration-count: infinite;
   image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .bird-one   { animation-duration: 1s;    animation-delay: -0.5s;  }
@@ -95,7 +105,7 @@
 .bird-container-ten   { animation-duration: 23s;  animation-delay: -19s;   top: 15%; opacity: 0.40; }
 
 @keyframes fly-cycle {
-  100% { background-position: -900% 0; }
+  100% { background-position: -880px 0; }
 }
 
 @keyframes fly-right-one {
@@ -160,66 +170,28 @@
 
 /* ── Animações de entrada da Hero ──── */
 @keyframes heroFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes heroScaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
 }
 
-.hero__logo {
-  animation: heroScaleIn 0.8s ease both;
-  animation-delay: 0.1s;
-}
-
-.hero__tagline-pre {
-  animation: heroFadeIn 0.7s ease both;
-  animation-delay: 0.3s;
-}
-
-.hero__title {
-  animation: heroFadeIn 0.8s ease both;
-  animation-delay: 0.45s;
-}
-
-.hero__subtitle {
-  animation: heroFadeIn 0.7s ease both;
-  animation-delay: 0.6s;
-}
-
-.hero__tagline {
-  animation: heroFadeIn 0.7s ease both;
-  animation-delay: 0.75s;
-}
-
+.hero__logo        { animation: heroScaleIn 0.8s ease both; animation-delay: 0.1s; }
+.hero__tagline-pre { animation: heroFadeIn  0.7s ease both; animation-delay: 0.3s; }
+.hero__title       { animation: heroFadeIn  0.8s ease both; animation-delay: 0.45s; }
+.hero__subtitle    { animation: heroFadeIn  0.7s ease both; animation-delay: 0.6s; }
+.hero__tagline     { animation: heroFadeIn  0.7s ease both; animation-delay: 0.75s; }
 .hero__btn-group,
-.btn-group--hero {
-  animation: heroFadeIn 0.7s ease both;
-  animation-delay: 0.9s;
-}
+.btn-group--hero   { animation: heroFadeIn  0.7s ease both; animation-delay: 0.9s; }
 
 /* ── Loader / Spinner ──── */
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
+@keyframes spin { to { transform: rotate(360deg); } }
 
 .spinner {
-  width: 32px;
-  height: 32px;
+  width: 32px; height: 32px;
   border: 3px solid var(--color-brand-light);
   border-top-color: var(--color-brand);
   border-radius: 50%;
@@ -230,67 +202,47 @@
 /* ── Pulse ──── */
 @keyframes pulse {
   0%, 100% { box-shadow: 0 0 0 0 rgba(27, 58, 107, 0.4); }
-  50% { box-shadow: 0 0 0 12px rgba(27, 58, 107, 0); }
+  50%       { box-shadow: 0 0 0 12px rgba(27, 58, 107, 0); }
 }
+.pulse-ring { animation: pulse 2s ease-in-out infinite; }
 
-.pulse-ring {
-  animation: pulse 2s ease-in-out infinite;
-}
-
-/* ── Float animation ──── */
+/* ── Float ──── */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
+  50%       { transform: translateY(-12px); }
 }
-
 .float { animation: float 4s ease-in-out infinite; }
 
-/* ── Shimmer de loading ──── */
+/* ── Shimmer ──── */
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
 }
 
 /* ── Page transition ──── */
 @keyframes pageIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
-
-.page-content {
-  animation: pageIn 0.5s ease both;
-}
+.page-content { animation: pageIn 0.5s ease both; }
 
 /* ── Hover underline animado ──── */
-.animated-underline {
-  position: relative;
-  display: inline-block;
-}
-
+.animated-underline { position: relative; display: inline-block; }
 .animated-underline::after {
   content: '';
   position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
+  bottom: -2px; left: 0;
+  width: 0; height: 2px;
   background: var(--color-brand);
   transition: width var(--transition-normal);
 }
-
 .animated-underline:hover::after { width: 100%; }
 
-/* ── Gradiente animado no fundo hero ──── */
+/* ── Gradiente animado ──── */
 @keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0%   { background-position:   0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position:   0% 50%; }
 }
 
 /* ── Partículas de decoração ──── */
@@ -300,14 +252,12 @@
   opacity: 0.06;
   pointer-events: none;
 }
-
 .deco-circle--1 {
   width: 400px; height: 400px;
   background: var(--color-brand);
   top: -100px; right: -100px;
   animation: float 8s ease-in-out infinite;
 }
-
 .deco-circle--2 {
   width: 200px; height: 200px;
   background: var(--color-warm);
@@ -325,7 +275,7 @@
 .stagger-children > *:nth-child(7) { transition-delay: 0.65s; }
 .stagger-children > *:nth-child(8) { transition-delay: 0.75s; }
 
-/* ── Transição de hover para ícones Phosphor ──── */
+/* ── Ícones Phosphor ──── */
 .icon-btn {
   display: inline-flex;
   align-items: center;
@@ -335,13 +285,12 @@
   transition: background var(--transition-fast), transform var(--transition-fast);
   cursor: pointer;
 }
-
 .icon-btn:hover {
   background: var(--color-brand-light);
   transform: scale(1.1);
 }
 
-/* ── Efeito glassmorphism leve (usado em sobreposições) ──── */
+/* ── Glassmorphism ──── */
 .glass {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(12px);
@@ -349,12 +298,9 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* ── Animação de aparição do navbar ──── */
+/* ── Navbar entrance ──── */
 @keyframes navbarIn {
   from { transform: translateY(-100%); opacity: 0; }
-  to   { transform: translateY(0);    opacity: 1; }
+  to   { transform: translateY(0);     opacity: 1; }
 }
-
-.navbar {
-  animation: navbarIn 0.5s ease both;
-}
+.navbar { animation: navbarIn 0.5s ease both; }
