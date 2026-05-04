@@ -209,12 +209,12 @@
 
   .navbar__inner {
     position: relative;
-    z-index: 10002;
+    z-index: 99999;
     height: 52px;
     align-items: center;
   }
 
-  /* CRÍTICO: forçar display:flex aqui, pois o padrão desktop é display:none */
+  /* Hamburguer — visível apenas quando o menu está fechado */
   .navbar__toggle {
     display: flex !important;
     flex-direction: column;
@@ -222,33 +222,40 @@
     align-items: center;
     gap: 5px;
     position: relative;
-    z-index: 10003; /* acima do overlay */
+    z-index: 99999;
     padding: 8px;
     cursor: pointer;
     background: none;
     border: none;
+    transition: opacity 0.2s ease;
   }
 
+  /* Esconde o hamburguer quando o menu está aberto (o X fica dentro do overlay) */
+  .navbar__toggle.open {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Overlay do menu — cobre TUDO, inclusive pássaros e hero */
   .navbar__nav-wrap {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(250, 248, 245, 0.98);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    width: 100%;
+    height: 100%;
+    background: var(--color-brand);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    /* Oculto por padrão: fora da tela, sem transição de posição */
+    gap: 8px;
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 10001; /* abaixo do toggle, acima do resto */
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+    z-index: 99998;
   }
 
   .navbar__nav-wrap.open {
@@ -257,27 +264,56 @@
     visibility: visible;
   }
 
+  /* Botão X dentro do overlay */
+  .navbar__nav-wrap::before {
+    content: '×';
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.85);
+    cursor: pointer;
+    line-height: 1;
+    pointer-events: none; /* O clique é tratado pelo toggle via JS */
+  }
+
   .navbar__nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
   }
 
   .navbar__link {
-    font-size: 1.25rem;
-    padding: 14px 32px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 14px 40px;
+    color: rgba(255, 255, 255, 0.85) !important;
+    border-radius: 50px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .navbar__link:hover,
+  .navbar__link.active {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #fff !important;
   }
 
   .navbar__cta {
-    margin-top: 16px;
+    margin-top: 24px;
     font-size: 1rem;
     padding: 14px 40px;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
   }
 
-  /* Garante que o toggle mude de cor corretamente quando o menu está aberto */
-  .navbar__toggle.open span {
-    background: var(--color-brand) !important;
+  .navbar__cta:hover {
+    background: rgba(255, 255, 255, 0.28);
+    border-color: #fff;
+    color: #fff;
+    transform: translateY(-2px);
   }
 }
 

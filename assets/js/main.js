@@ -51,6 +51,15 @@
       link.addEventListener('click', closeMenu);
     });
 
+    /* Fecha ao clicar no overlay (fundo) ou na área do X (canto sup direito) */
+    navWrap.addEventListener('click', function (e) {
+      const rect = navWrap.getBoundingClientRect();
+      const inXArea = e.clientX > rect.right - 80 && e.clientY < rect.top + 80;
+      if (e.target === navWrap || inXArea) {
+        closeMenu();
+      }
+    });
+
     /* Fecha ao clicar fora do menu */
     document.addEventListener('click', function (e) {
       if (navWrap.classList.contains('open') &&
