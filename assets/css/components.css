@@ -17,7 +17,6 @@
 
 .navbar.scrolled {
   background: rgba(250, 248, 245, 0.96);
-  /* backdrop-filter removido: criava stacking context que prendia o overlay fixed do menu mobile */
   box-shadow: var(--shadow-nav);
   padding: 12px 0;
 }
@@ -233,14 +232,13 @@
     pointer-events: none;
   }
 
-  /* Overlay — posição fixa, cobre 100% da viewport sem depender do pai */
   .navbar__nav-wrap {
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
     width: 100vw !important;
     height: 100vh !important;
-    height: 100dvh !important;  /* fallback moderno */
+    height: 100dvh !important;
     margin: 0 !important;
     padding: 0 !important;
     background: var(--color-brand) !important;
@@ -253,7 +251,7 @@
     pointer-events: none;
     visibility: hidden;
     transition: opacity 0.35s ease, visibility 0.35s ease;
-    z-index: 999999 !important;  /* acima de TUDO, inclusive pássaros */
+    z-index: 999999 !important;
     transform: none !important;
     overflow: hidden;
   }
@@ -264,7 +262,6 @@
     visibility: visible !important;
   }
 
-  /* X para fechar — dentro do overlay */
   .navbar__nav-wrap::before {
     content: '×';
     position: absolute;

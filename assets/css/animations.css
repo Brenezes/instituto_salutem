@@ -43,17 +43,6 @@
 [data-reveal-delay="500"] { transition-delay: 0.5s; }
 [data-reveal-delay="600"] { transition-delay: 0.6s; }
 
-/* ── Pássaros — Animação CSS Sprite ──── */
-/*
-  INSTRUÇÃO: Baixe o arquivo SVG do pássaro em:
-  https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg
-  Salve como: /assets/img/bird-sprite.svg
-
-  OU use o PNG abaixo (mais compatível com todos os browsers):
-  Baixe em: https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells.png
-  Salve como: /assets/img/bird-sprite.png
-*/
-
 .bird {
   background-image: url('/assets/img/bird.png');
   background-size: 1000% auto;   /* 10 frames × 100% = 1000% — CRÍTICO para sprite funcionar */
@@ -158,7 +147,6 @@
   .bird {
     width: 60px;
     height: 85px;
-    /* Ajusta o keyframe: 60px × 10 frames = -600px */
   }
   .bird-container-six,
   .bird-container-seven,
@@ -167,7 +155,6 @@
   .bird-container-ten { display: none; }
 }
 
-/* Sobrescreve o keyframe para mobile com tamanho correto */
 @media (max-width: 768px) {
   @keyframes fly-cycle {
     100% { background-position: -600px 0; }

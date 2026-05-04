@@ -21,17 +21,17 @@
   --color-bg:           #FAF8F5;
   --color-bg-alt:       #F0EBE3;
 
-  /* Texto — conforto visual: evitar preto puro, usar tons suaves */
-  --color-text:         #082c4d;   /* azul-escuro da logo — títulos */
-  --color-text-body:    #374151;   /* cinza-escuro suave — parágrafos */
-  --color-text-light:   #6b7280;   /* cinza médio — legendas, captions */
+  /* Texto — conforto visual: */
+  --color-text:         #082c4d;
+  --color-text-body:    #374151;
+  --color-text-light:   #6b7280;
   --color-white:        #FFFFFF;
 
   /* CTAs */
   --color-cta:          #1B3A6B;
   --color-cta-hover:    #2E5BA8;
 
-  /* Tipografia — Lora (serifada, credibilidade) + Montserrat (corpo, leitura limpa) */
+  /* Tipografia — Lora + Montserrat  */
   --font-title:  'Lora', Georgia, serif;
   --font-body:   'Montserrat', system-ui, sans-serif;
 
