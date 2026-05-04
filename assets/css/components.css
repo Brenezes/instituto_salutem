@@ -222,7 +222,7 @@
     align-items: center;
     gap: 5px;
     position: relative;
-    z-index: 10002;
+    z-index: 10003; /* acima do overlay */
     padding: 8px;
     cursor: pointer;
     background: none;
@@ -243,15 +243,18 @@
     align-items: center;
     justify-content: center;
     gap: 12px;
+    /* Oculto por padrão: fora da tela, sem transição de posição */
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease;
-    z-index: 10000;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10001; /* abaixo do toggle, acima do resto */
   }
 
   .navbar__nav-wrap.open {
     opacity: 1;
     pointer-events: auto;
+    visibility: visible;
   }
 
   .navbar__nav {
@@ -270,6 +273,11 @@
     margin-top: 16px;
     font-size: 1rem;
     padding: 14px 40px;
+  }
+
+  /* Garante que o toggle mude de cor corretamente quando o menu está aberto */
+  .navbar__toggle.open span {
+    background: var(--color-brand) !important;
   }
 }
 
