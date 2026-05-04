@@ -144,4 +144,77 @@
     el.textContent = new Date().getFullYear();
   });
 
+  /* FEEDBACK DO FORMULÁRIO (Cloudflare API / Resend) */
+
+  (function initFormFeedback() {
+    const form = document.getElementById('formContato');
+    if (!form) return;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const btn = form.querySelector('button[type="submit"]');
+      const successEl = form.parentElement.querySelector('.form-success');
+      const errorEl   = form.parentElement.querySelector('.form-error');
+
+      if (btn) {
+        btn.disabled = true;
+        btn.innerHTML = '<i class="ph ph-spinner-gap" aria-hidden="true" style="animation: spin 1s linear infinite;"></i> Enviando...';
+      }
+
+      try {
+        const data = new FormData(form);
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          form.reset();
+          if (successEl) {
+            successEl.style.display = 'block';
+            if (errorEl) errorEl.style.display = 'none';
+            successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+        } else {
+          throw new Error('Falha no envio');
+        }
+      } catch {
+        if (errorEl) {
+          errorEl.style.display = 'block';
+          if (successEl) successEl.style.display = 'none';
+        } else {
+          alert('Ocorreu um erro. Por favor, entre em contato pelo WhatsApp ou e-mail.');
+        }
+      } finally {
+        if (btn) {
+          btn.disabled = false;
+          btn.innerHTML = '<i class="ph ph-paper-plane-tilt" aria-hidden="true"></i> Enviar mensagem';
+        }
+      }
+    });
+  })();
+
+  // ── 5. IMAGENS COM FALLBACK ───────────────────────────────
+  (function initImageFallbacks() {
+    document.querySelectorAll('img[data-fallback]').forEach(img => {
+      img.addEventListener('error', function () {
+        const fallback = this.getAttribute('data-fallback');
+        if (fallback && this.src !== fallback) {
+          this.src = fallback;
+        }
+      });
+    });
+
+    document.querySelectorAll('.team-card__photo').forEach(img => {
+      img.addEventListener('error', function () {
+        const name = this.getAttribute('alt') || 'PS';
+        const initials = name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase();
+        const svg = `data:image/svg+xml;utf8,${encodeURIComponent(generateAvatarSVG(initials))}`;
+        this.src = svg;
+      });
+    });
+  })();
+
 })();
