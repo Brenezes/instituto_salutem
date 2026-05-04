@@ -210,11 +210,23 @@
   .navbar__inner {
     position: relative;
     z-index: 10002;
+    height: 52px;
+    align-items: center;
   }
 
+  /* CRÍTICO: forçar display:flex aqui, pois o padrão desktop é display:none */
   .navbar__toggle {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
     position: relative;
     z-index: 10002;
+    padding: 8px;
+    cursor: pointer;
+    background: none;
+    border: none;
   }
 
   .navbar__nav-wrap {
@@ -1429,5 +1441,13 @@
   .section--clinica__bg {
     background-attachment: scroll;
     background-position: center center;
+  }
+}
+
+/* ── GRID CONTATO — responsivo mobile ──── */
+@media (max-width: 768px) {
+  .contato-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
   }
 }

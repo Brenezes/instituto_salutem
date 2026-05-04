@@ -56,16 +56,15 @@
 
 .bird {
   background-image: url('/assets/img/bird.png');
-  background-size: auto 100%;
+  background-size: 1000% auto;   /* 10 frames × 100% = 1000% — CRÍTICO para sprite funcionar */
   background-repeat: no-repeat;
+  background-position: 0 0;
   width: 88px;
   height: 125px;
   will-change: background-position;
   animation-name: fly-cycle;
   animation-timing-function: steps(10);
   animation-iteration-count: infinite;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
 }
 
 .bird-one   { animation-duration: 1s;    animation-delay: -0.5s;  }
@@ -156,12 +155,23 @@
 
 @media (max-width: 768px) {
   .bird-container { opacity: 0.38; }
-  .bird { width: 60px; height: 85px; }
+  .bird {
+    width: 60px;
+    height: 85px;
+    /* Ajusta o keyframe: 60px × 10 frames = -600px */
+  }
   .bird-container-six,
   .bird-container-seven,
   .bird-container-eight,
   .bird-container-nine,
   .bird-container-ten { display: none; }
+}
+
+/* Sobrescreve o keyframe para mobile com tamanho correto */
+@media (max-width: 768px) {
+  @keyframes fly-cycle {
+    100% { background-position: -600px 0; }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
