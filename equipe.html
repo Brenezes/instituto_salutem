@@ -267,52 +267,79 @@
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- ── FOOTER ─────────────────────────────────────────── -->
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <a href="/index.html" class="footer__logo">
+          <a href="/" class="footer__logo" aria-label="Instituto Salutem – Página inicial">
             <div style="display:flex;flex-direction:column;line-height:1.1;">
               <span class="footer__logo-name">Instituto Salutem</span>
               <span class="footer__logo-sub">Psicologia Plural</span>
             </div>
           </a>
-          <p class="footer__desc">Levamos conhecimento técnico e ético nas diversas formas do atuar da Psicologia.</p>
+          <p class="footer__desc">Levamos conhecimento técnico e ético nas diversas formas do atuar da Psicologia. Atendimento 100% online, em todo o Brasil.</p>
           <div class="footer__social">
-            <a href="https://www.instagram.com/institutosalutem.psiplural" target="_blank" rel="noopener" class="footer__social-link" aria-label="Instagram"><i class="ph ph-instagram-logo" aria-hidden="true"></i></a>
-            <!-- <a href="https://wa.me/5524992182941" target="_blank" rel="noopener" class="footer__social-link" aria-label="WhatsApp"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i></a> -->
-            <a href="mailto:salutempsiplural@gmail.com" class="footer__social-link" aria-label="E-mail"><i class="ph ph-envelope" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/institutosalutem.psiplural" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Instagram">
+              <i class="ph ph-instagram-logo" aria-hidden="true"></i>
+            </a>
+            <!-- <a href="https://wa.me/5524992182941" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="WhatsApp">
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
+            </a> -->
+            <a href="mailto:salutempsiplural@gmail.com" class="footer__social-link" aria-label="E-mail">
+              <i class="ph ph-envelope" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
+
         <div>
           <p class="footer__col-title">Navegação</p>
-          <nav class="footer__links">
-            <a href="/index.html" class="footer__link">Home</a>
-            <a href="/sobre.html" class="footer__link">Sobre</a>
-            <a href="/equipe.html" class="footer__link">Equipe</a>
-            <a href="/clinica.html" class="footer__link">Clínica</a>
-            <a href="/cursos.html" class="footer__link">Cursos</a>
-            <a href="/artigos.html" class="footer__link">Artigos</a>
-            <a href="/contato.html" class="footer__link">Contato</a>
+          <nav class="footer__links" aria-label="Links do rodapé">
+            <a href="/" class="footer__link"><i class="ph ph-house" aria-hidden="true"></i> Home</a>
+            <a href="/sobre.html" class="footer__link"><i class="ph ph-info" aria-hidden="true"></i> Sobre</a>
+            <a href="/equipe.html" class="footer__link"><i class="ph ph-users" aria-hidden="true"></i> Equipe</a>
+            <a href="/clinica.html" class="footer__link"><i class="ph ph-heartbeat" aria-hidden="true"></i> Clínica</a>
+            <a href="/cursos.html" class="footer__link"><i class="ph ph-graduation-cap" aria-hidden="true"></i> Cursos</a>
+            <a href="/artigos.html" class="footer__link"><i class="ph ph-newspaper" aria-hidden="true"></i> Artigos</a>
+            <a href="/contato.html" class="footer__link"><i class="ph ph-chat-circle" aria-hidden="true"></i> Contato</a>
           </nav>
         </div>
+
         <div>
           <p class="footer__col-title">Contato</p>
-          <div class="footer__contact-item"><i class="ph ph-envelope" aria-hidden="true"></i><a href="mailto:salutempsiplural@gmail.com" class="footer__link" style="color:rgba(255,255,255,0.7)">salutempsiplural@gmail.com</a></div>
-          <!-- <div class="footer__contact-item"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i><a href="https://wa.me/5524992182941" class="footer__link" style="color:rgba(255,255,255,0.7)" target="_blank" rel="noopener">+55 24 99218-2941</a></div> -->
-          <div class="footer__contact-item"><i class="ph ph-globe" aria-hidden="true"></i><span>Atendimento online · Todo o Brasil</span></div>
+          <div class="footer__contact-item">
+            <i class="ph ph-envelope" aria-hidden="true"></i>
+            <a href="mailto:salutempsiplural@gmail.com" class="footer__link" style="color:rgba(255,255,255,0.7)">salutempsiplural@gmail.com</a>
+          </div>
+          <!-- <div class="footer__contact-item">
+            <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
+            <a href="https://wa.me/5524992182941" class="footer__link" style="color:rgba(255,255,255,0.7)" target="_blank" rel="noopener">+55 24 99218-2941</a>
+          </div> -->
+          <div class="footer__contact-item">
+            <i class="ph ph-instagram-logo" aria-hidden="true"></i>
+            <a href="https://www.instagram.com/institutosalutem.psiplural" class="footer__link" style="color:rgba(255,255,255,0.7)" target="_blank" rel="noopener">@institutosalutem.psiplural</a>
+          </div>
+          <div class="footer__contact-item" style="margin-top:8px;">
+            <i class="ph ph-globe" aria-hidden="true"></i>
+            <span>Atendimento online · Todo o Brasil</span>
+          </div>
         </div>
       </div>
+
       <div class="footer__bottom">
-        <p class="footer__copy">© <span class="js-year">2025</span> Instituto Salutem – Psicologia Plural.</p>
-        <div class="footer__legal"><a href="/politica-de-privacidade.html">Política de Privacidade</a></div>
+        <p class="footer__copy">© <span class="js-year">2025</span> Instituto Salutem – Psicologia Plural. Todos os direitos reservados.</p>
+        <div class="footer__legal">
+          <a href="/politica-de-privacidade.html">Política de Privacidade</a>
+        </div>
         <p class="footer__crp">CRP/RJ: Victoria 05/20157 · Bruna 05/78653 · Vanessa 05/74127</p>
+
       </div>
-      <div class="footer__developer">
-        <p>Desenvolvido por <a href="https://bmenezes.dev" target="_blank" rel="noopener noreferrer">bmenezes.dev</a></p>
-      </div>
+        <div class="footer__developer">
+          <p>Desenvolvido por <a href="https://bmenezes.dev" target="_blank" rel="noopener noreferrer">bmenezes.dev</a></p>
+        </div>
     </div>
+
+    
   </footer>
 
   <script src="/assets/js/main.js" defer></script>
