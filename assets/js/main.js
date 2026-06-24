@@ -36,7 +36,6 @@
   }
 
   if (toggle && navWrap) {
-    /* Abre/fecha ao clicar no botão */
     toggle.addEventListener('click', function (e) {
       e.stopPropagation();
       if (navWrap.classList.contains('open')) {
@@ -46,12 +45,10 @@
       }
     });
 
-    /* Fecha ao clicar em qualquer link do menu */
     navWrap.querySelectorAll('.navbar__link').forEach(function (link) {
       link.addEventListener('click', closeMenu);
     });
 
-    /* Fecha ao clicar no overlay (fundo) ou na área do X (canto sup direito) */
     navWrap.addEventListener('click', function (e) {
       const rect = navWrap.getBoundingClientRect();
       const inXArea = e.clientX > rect.right - 80 && e.clientY < rect.top + 80;
@@ -60,7 +57,6 @@
       }
     });
 
-    /* Fecha ao clicar fora do menu */
     document.addEventListener('click', function (e) {
       if (navWrap.classList.contains('open') &&
           !navWrap.contains(e.target) &&
@@ -69,7 +65,6 @@
       }
     });
 
-    /* Fecha com tecla Escape */
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && navWrap.classList.contains('open')) {
         closeMenu();
@@ -77,7 +72,6 @@
       }
     });
 
-    /* Fecha ao redimensionar para desktop */
     window.addEventListener('resize', function () {
       if (window.innerWidth > 900) {
         closeMenu();
@@ -85,7 +79,6 @@
     });
   }
 
-  /* ── Scroll Reveal ──── */
   const revealEls = document.querySelectorAll('[data-reveal]');
   if (revealEls.length && 'IntersectionObserver' in window) {
     const observer = new IntersectionObserver(
